@@ -1,0 +1,128 @@
+---
+import IconoButton from "../components/IconoButton.astro"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/4db8309fde.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container_header">
+            <div class="container_header-title">
+                <h1 class="container_header-title-text">
+                    Busca Tu Antojo 
+                </h1>
+            </div>
+            <div class="container_header-icons">
+                <ul class="container_header-icons_ul">
+                    <li class="header_icon"><IconoButton><i class="fa-solid fa-user"></i></IconoButton></li>
+                    <li class="header_icon"><IconoButton><i class="fa-solid fa-magnifying-glass"></i></IconoButton></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="container_header_pages-nav">
+            <ul class="container_pages_ul"> 
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Recetas</a></li>
+                <li><a href="">Sobre Nosotros</a></li>
+                <li><a href="">Agrega Tu Receta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <slot />
+    </main>
+    <footer>
+        <h4 class="footer_text">
+            Propiedad de Nahuel Basail Miras y Fernando Daniel Tome Derrigo
+        </h4>
+    </footer>
+</body>
+</html>
+
+<style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 8fr 0.5fr;
+}
+header {
+  background-color: rgba(219, 182, 138, 255);
+
+  .container_header {
+    border-bottom: 0.2em solid rgba(252, 251, 249, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+
+    .container_header-title {
+      padding: 0.5em;
+      .container_header-title-text {
+        color: rgba(193, 88, 30, 255);
+      }
+    }
+
+    .container_header-icons {
+      .container_header-icons_ul {
+        display: flex;
+        align-items: center;
+        .header_icon {
+          padding: 0.5em;
+          color: rgba(193, 88, 30, 255);
+          list-style: none;
+          margin-right: 2em;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+  .container_header_pages-nav {
+    .container_pages_ul {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      list-style: none;
+
+      li {
+        padding: 0.5em;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+main{
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+}
+
+footer {
+  background-color: rgba(219, 182, 138, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .footer_text {
+    color: rgba(193, 88, 30, 255);
+  }
+}
+
+</style>
