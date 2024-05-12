@@ -1,49 +1,54 @@
 ---
-import Header from "../../layouts/Header.astro";
-import Receta from "../../components/Receta.astro";
-import Subtitulos from "../../components/Subtitulos.astro";
-import RecetasRecomendadas from "../../components/RecetasRecomendadas.astro";
+import HeaderAndFooter from "../../layouts/HeaderAndFooter.astro";
+import RecipeCard from "../../components/RecipeCard.astro";
+import Subtitle from "../../components/Subtitle.astro";
+import RecommendedRecipes from "../../components/RecommendedRecipes.astro";
 ---
-<Header title="recetas">
-    <RecetasRecomendadas/>
+
+<HeaderAndFooter title="MRR Recetas">
+  <main>
+    <RecommendedRecipes subtitle="Recetas Recomendadas" />
     <article class="recipes_container">
-        <Subtitulos>Recetas</Subtitulos>
-        <section class="recipes">
-            <Receta/>
-            <Receta/>
-            <Receta/>
-            <Receta/>
-            <Receta/>
-            <Receta/>
-            <Receta/>
-            <Receta/>
-            <Receta/>
-            <Receta/>
-            <Receta/>
-            <Receta/>
-        </section>
+      <Subtitle>Recetas</Subtitle>
+      <section class="recipes">
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+      </section>
     </article>
-</Header>
-
+  </main>
+</HeaderAndFooter>
 <style>
+  main {
+    grid-column: span 4;
+    width: 100%;
+    background-color: rgb(249, 248, 247);
+  }
 
-.recipes_container{
+  .recipes_container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    
+    margin-bottom: 1.5em;
+
     .recipes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        gap: 1em;
-
-        
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      gap: 1em;
     }
-
-}
+  }
 </style>

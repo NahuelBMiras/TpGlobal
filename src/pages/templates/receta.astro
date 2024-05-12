@@ -1,0 +1,99 @@
+---
+import HeaderAndFooter from "../../layouts/HeaderAndFooter.astro";
+import RecipeCard from "../../components/RecipeCard.astro";
+import Recepi from "../../components/Recepi.astro";
+import RecepiSteps from "../../components/RecepiSteps.astro";
+import RecepiVideo from "../../components/RecepiVideo.astro";
+import Subtitle from "../../components/Subtitle.astro";
+---
+
+<HeaderAndFooter title="Receta">
+  <main>
+    <Recepi />
+    <RecepiSteps />
+    <RecepiVideo />
+    <article class="recommended-recipes-container">
+      <Subtitle>Tambien te pueden gustar:</Subtitle>
+      <section class="recommended-recipes">
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+      </section>
+    </article>
+  </main>
+</HeaderAndFooter>
+
+<style>
+  main {
+    width: 100%;
+    grid-column: span 4;
+    background-color: rgb(249, 248, 247);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .recommended-recipes-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5em;
+    padding: 1em;
+    margin-bottom: 1em;
+    .recommended-recipes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5em;
+    }
+  }
+
+  @media (width > 900px) {
+    .recommended-recipes-container {
+      width: 90%;
+      .recommended-recipes {
+        flex-direction: row;
+      }
+    }
+  }
+
+  @media (width > 1300px) {
+    main {
+      grid-column: span 4;
+
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr;
+      row-gap: 1em;
+      place-content: center;
+      place-items: center;
+    }
+    .recommended-recipes-container {
+      grid-column: 2/4;
+      width: 100%;
+      .recommended-recipes {
+        width: 100%;
+      }
+    }
+  }
+</style>
+
+<script>
+  const recepi = [
+    "pizza a la piedra",
+    "milanesas de soja",
+    "pan de campo",
+    "risotto",
+    "torta",
+    "budin",
+    "brownie",
+    "galletitas de avena y banana",
+    "vitel tone",
+    "sopa",
+    "pato a la naranja",
+  ];
+</script>

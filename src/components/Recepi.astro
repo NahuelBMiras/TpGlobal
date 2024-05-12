@@ -1,0 +1,289 @@
+---
+import Subtitle from "./Subtitle.astro";
+---
+
+<article class="recepi">
+  <h1 class="recepi-name"><i>PAN DE CAMPO</i></h1>
+  <section class="recepi-ingredients">
+    <section class="recepi-text">
+      <h2 class="ingredients">Ingredientes:</h2>
+      <ul class="ingredients-list">
+        <li>10 gramos de levadura seca</li>
+        <li>500 gramos de harina común</li>
+        <li>10 gramos de sal fina</li>
+        <li>30 gramos de grasa</li>
+        <li>300 ml de agua tibia</li>
+      </ul>
+
+      <h2 class="steps">Pasos:</h2>
+      <p>
+        Para preparar este delicioso pan de campo, comienza mezclando la
+        levadura con la harina y añadiendo el agua. Luego, tamiza la harina y
+        agrega la sal junto con el azúcar, mezclando bien. Añade la grasa y
+        mézclala con la harina hasta que se disuelva por completo. Una vez
+        integrados los ingredientes, agrega el fermento junto con el agua y
+        comienza a unir todo muy bien. Después de formar una masa lisa, déjala
+        reposar en un bol durante unos 30 minutos, o hasta que duplique su
+        volumen. Luego, forma un cilindro con la masa y córtala en el tamaño
+        deseado. Haz bollos y colócalos en una bandeja previamente aceitada.
+        Corta los panes y déjalos duplicar su tamaño. Finalmente, llévalos al
+        horno precalentado a 180 grados Celsius durante aproximadamente 25
+        minutos, o hasta que estén dorados y cocidos por completo. ¡Prepárate
+        para disfrutar de un pan de campo casero y delicioso!
+      </p>
+    </section>
+    <picture class="recepi-img-container">
+      <img src="../../public/Recetas/" alt="" class="recepi-img" />
+    </picture>
+  </section>
+</article>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .recepi {
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 1em;
+    margin-bottom: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .recepi-name {
+      font-size: 2.488rem;
+      text-decoration: underline 2px;
+    }
+    .recepi-ingredients {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
+
+      padding: 1em;
+
+      .recepi-text {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        margin-top: 0.8em;
+
+        .ingredients {
+          font-size: 2.074rem;
+
+          margin-bottom: 0.2em;
+          padding: 0 0.5em;
+        }
+        .steps {
+          font-size: 2.074rem;
+          margin-bottom: 0.2em;
+          padding: 0 0.5em;
+        }
+        .ingredients-list {
+          list-style: none;
+          font-size: 1rem;
+
+          margin-bottom: 1em;
+          padding: 0 1em;
+          li {
+            line-height: 1.5;
+          }
+        }
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+
+          padding: 0 1em;
+        }
+      }
+
+      .recepi-img-container {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        margin-left: 0.5em;
+
+        .recepi-img {
+          width: 100%;
+          border-radius: 0.5em;
+        }
+      }
+    }
+  }
+
+  @media (width > 500px) {
+    .recepi {
+      width: 90%;
+
+      .recepi-ingredients {
+        .recepi-text {
+          width: 90%;
+        }
+        .recepi-img-container {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  @media (width > 700px) {
+    .recepi {
+      width: 70%;
+
+      .recepi-ingredients {
+        .recepi-text {
+          width: 90%;
+        }
+        .recepi-img-container {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  @media (width > 1100px) {
+    .recepi {
+      width: 70%;
+
+      .recepi-ingredients {
+        .recepi-text {
+          width: 80%;
+        }
+        .recepi-img-container {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  @media (width > 1250px) {
+    .recepi {
+      width: 70%;
+
+      .recepi-ingredients {
+        .recepi-text {
+          width: 70%;
+        }
+        .recepi-img-container {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  @media (width > 1300px) {
+    .recepi {
+      grid-column: 1/5;
+      width: 100%;
+
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+      margin-top: 3em;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .recepi-name {
+        font-size: 3rem;
+        text-decoration: underline 2px;
+      }
+
+      .recepi-ingredients {
+        padding: 0.5em 0;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        font-size: 2rem;
+
+        .recepi-text {
+          width: 50%;
+
+          padding: 0.5em;
+
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+        }
+
+        .recepi-img-container {
+          width: 50%;
+
+          display: flex;
+          align-items: center;
+
+          margin-left: 0.5em;
+          .recepi-img {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 1300px) {
+    .recepi {
+      grid-column: 2/4;
+      width: 100%;
+
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+      margin-top: 3em;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .recepi-name {
+        font-size: 3rem;
+        text-decoration: underline 2px;
+      }
+
+      .recepi-ingredients {
+        padding: 0.5em 0;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        font-size: 2rem;
+
+        .recepi-text {
+          width: 50%;
+
+          padding: 0.5em;
+
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+        }
+
+        .recepi-img-container {
+          width: 50%;
+
+          display: flex;
+          align-items: center;
+
+          margin-left: 0.5em;
+          .recepi-img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+</style>

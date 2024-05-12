@@ -1,103 +1,104 @@
 ---
-import Header from "../layouts/Header.astro"
+import HeaderAndFooter from "../layouts/HeaderAndFooter.astro";
+import RecommendedRecipes from "../components/RecommendedRecipes.astro";
+import Subtitle from "../components/Subtitle.astro";
+import RecipeCard from "../components/RecipeCard.astro";
 ---
-	<Header title="astro">
-		<a href="/templates/recetas/"> recetas</a>
-		<article class="presentation_explication">
-			<section class="presentation">
-				<h2>Presentation</h2>
-			</section>
-			<section class="explication">
-				<h2>Explication</h2>
-			</section>
-		</article>
-		<article class="form">
-			<h2>Encuetra la receta para vos</h2>
-			<form action="">
-				<label for="">
-					<input type="text">
-					<select>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-					</select>
-				</label>
-				<br>
-				<label for="">
-					<input type="text">
-					<select>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-					</select>
-				</label>
-				<br>
-				<label for="">
-					<input type="text">
-					<select>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-					</select>
-				</label>
-				<br>
-				<label for="">
-					<input type="text">
-					<select>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-					</select>
-				</label>
-				<br>
-				<label for="">
-					<input type="text">
-					<select>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-					</select>
-				</label>
-			</form>
-		</article>
-	</Header>
-</html>
+
+<HeaderAndFooter title="Mi Rincon De Recetas">
+  <main>
+    <RecommendedRecipes subtitle="Recetas Recomendadas" />
+    <a href="templates/receta">receta</a>
+    <a href="templates/recetas">recetas</a>
+    <article class="find_recipe">
+      <Subtitle>Encuentra Tu Receta Ideal</Subtitle>
+      <section class="container-form-find_recipe">
+        <form action="" class="form-find_recipe">
+          <label class="label_ingredient">
+            <select>
+              <option value="opcion1">Opción 1</option>
+              <option value="opcion2">Opción 2</option>
+              <option value="opcion3">Opción 3</option>
+            </select>
+          </label>
+          <br />
+          <label class="label_ingredient">
+            <select>
+              <option value="opcion1">Opción 1</option>
+              <option value="opcion2">Opción 2</option>
+              <option value="opcion3">Opción 3</option>
+            </select>
+          </label>
+          <br />
+          <label class="label_ingredient">
+            <select>
+              <option value="opcion1">Opción 1</option>
+              <option value="opcion2">Opción 2</option>
+              <option value="opcion3">Opción 3</option>
+            </select>
+          </label>
+          <br />
+          <label class="label_difficulty">
+            <select>
+              <option value="opcion1">Opción 1</option>
+              <option value="opcion2">Opción 2</option>
+              <option value="opcion3">Opción 3</option>
+            </select>
+          </label>
+          <br />
+          <label class="label_taste">
+            <select>
+              <option value="opcion1">Opción 1</option>
+              <option value="opcion2">Opción 2</option>
+              <option value="opcion3">Opción 3</option>
+            </select>
+          </label>
+          <br />
+          <button>Buscar Receta</button>
+        </form>
+      </section>
+      <section class="recommended_recipes">
+        <picture class="carousel-container">
+          <div>
+            <RecipeCard />
+          </div>
+          <div>
+            <RecipeCard />
+          </div>
+          <div>
+            <RecipeCard />
+          </div>
+        </picture>
+      </section>
+    </article>
+    <article>
+      <section class="popular_recipes">
+        <picture class="carousel_container">
+          <div>
+            <RecipeCard />
+          </div>
+          <div>
+            <RecipeCard />
+          </div>
+          <div>
+            <RecipeCard />
+          </div>
+        </picture>
+      </section>
+    </article>
+  </main>
+</HeaderAndFooter>
+<script></script>
 <style>
+  main {
+    grid-column: span 4;
 
-.presentation_explication {
-	width: 70%;
-  background-color: rgba(219, 183, 138, 0.301);
-  text-align: center;
-  border-top-left-radius: 2em;
-  border-top-right-radius: 2em;
+    width: 100%;
+    background-color: rgb(249, 248, 247);
 
-
-  padding: 0.5em 2em;
-  margin: 2em 0 0.5em;
-
-  .presentation {
-	width: 100%;
-    border-bottom: 0.2em solid rgba(252, 251, 249, 255);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1.5fr;
+    place-content: center;
   }
-  .explication {
-	width: 100%;
-  }
-}
-
-.form {
-	width: 70%;
-	text-align: center;
-    background-color: rgba(219, 183, 138, 0.301);
-  padding: 2em;
-
-  border-bottom-left-radius: 2em;
-  border-bottom-right-radius: 2em;
-}
-
-
 </style>
