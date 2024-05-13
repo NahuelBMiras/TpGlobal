@@ -10,7 +10,8 @@ const recipes = [
       "6 cucharadas manteca derretida",
       "Cantidad necesaria semolin",
     ],
-    steps: [
+    recipeInstructions: "",
+    recipeSteps: [
       [
         "Activación de la levadura:",
         "Desmenuza la levadura en un bowl y añade el azúcar.Mezcla bien.",
@@ -48,7 +49,7 @@ const recipes = [
         "Coloca la pizza en un nivel superior para que se termine de cocinar y se derrita el queso.",
       ],
     ],
-    recipeImg: "url(../../public/Recetas/pizza.jpg)",
+    recipeImg: "../../public/Recetas/pizza.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/G3LmiPpjMgY?si=4pcii-ldTIPEHMZa",
   },
@@ -64,7 +65,7 @@ const recipes = [
       "Sal y pimienta al gusto ",
       "Aceite para freír",
     ],
-    steps: [
+    recipeSteps: [
       [
         "Rehidratación de la proteína texturizada de soja:",
         "Coloca la proteína texturizada de soja en un bol y cúbrela con agua caliente.",
@@ -88,7 +89,7 @@ const recipes = [
         "Retira las milanesas del aceite y colócalas sobre papel absorbente para eliminar el exceso de grasa.",
       ],
     ],
-    recipeImg: "url(../../public/Recetas/Milanesas.png)",
+    recipeImg: "../../public/Recetas/Milanesas.png",
     recipeVideo:
       "https://www.youtube.com/embed/G3LmiPpjMgY?si=3CV52zT4a-m5e7jc",
   },
@@ -101,7 +102,9 @@ const recipes = [
       "30 gramos de grasa",
       "300 ml de agua tibia",
     ],
-    steps: [
+    recipeInstructions:
+      "Para preparar este delicioso pan de campo, comienza mezclando la levadura con la harina y añadiendo el agua. Luego, tamiza la harina y agrega la sal junto con el azúcar, mezclando bien. Añade la grasa y mézclala con la harina hasta que se disuelva por completo. Una vez integrados los ingredientes, agrega el fermento junto con el agua y comienza a unir todo muy bien. Después de formar una masa lisa, déjala reposar en un bol durante unos 30 minutos, o hasta que duplique su volumen. Luego, forma un cilindro con la masa y córtala en el tamaño deseado. Haz bollos y colócalos en una bandeja previamente aceitada. Corta los panes y déjalos duplicar su tamaño. Finalmente, llévalos al horno precalentado a 180 grados Celsius durante aproximadamente 25 minutos, o hasta que estén dorados y cocidos por completo. ¡Prepárate para disfrutar de un pan de campo casero y delicioso!",
+    recipeSteps: [
       ["Fermento:", "Mezclar la levadura con la harina y agregar el agua."],
       ["Masa:", "Tamizar la harina."],
       [
@@ -121,7 +124,7 @@ const recipes = [
         "Cuando haya duplicado su tamaño se debe llevar a un horno precalentado a 180 grados por 25 minutos aproximadamente",
       ],
     ],
-    recipeImg: "url(../../public/Recetas/Pan.jpg)",
+    recipeImg: "../../public/Recetas/Pan.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/TisLykAy050?si=da3BXNqJnm0Odd2w",
   },
@@ -139,7 +142,9 @@ const recipes = [
       "2 cucharadas pasta de ajo",
       "Opcional: queso",
     ],
-    steps: [
+    recipeInstructions:
+      "Preparación del risotto: Después de haber remojado el arroz durante toda la noche, escúrrelo y enjuágalo bien bajo agua fría. Esto ayuda a eliminar el exceso de almidón y asegura que el risotto tenga la textura adecuada. Preparación de los ingredientes: Pica finamente todas las verduras: la cebolla, el pimiento, la zanahoria y el zucchini. Corta los champiñones u hongos en rodajas. Cocción del risotto: En una olla grande, calienta un poco de aceite de oliva a fuego medio. Agrega la cebolla picada y saltea hasta que esté transparente. Añade el arroz yamaní integral escurrido y remueve durante unos minutos hasta que esté ligeramente tostado y cubierto con el aceite. Agrega la pasta de ajo y mezcla bien. Vierte el vino blanco y cocina hasta que se haya absorbido por completo, removiendo ocasionalmente. Añade las verduras picadas (zanahoria, pimiento, zucchini) y los champiñones cortados. Cocina por unos minutos hasta que las verduras estén tiernas. Ahora, comienza a agregar el caldo caliente de verduras poco a poco, una taza a la vez, mientras revuelves constantemente. Asegúrate de que el arroz absorba cada adición de caldo antes de agregar más. Continúa este proceso hasta que el arroz esté cocido pero aún al dente, esto puede tomar alrededor de 20-25 minutos. Acabado y presentación: Una vez que el arroz esté cocido al punto deseado, retira la olla del fuego. Si lo deseas, puedes añadir un poco de queso rallado en este punto para darle un toque extra de cremosidad. Sirve el risotto caliente, espolvoreado con un poco más de queso rallado si lo prefieres, y acompáñalo con un buen vino blanco.",
+    recipeSteps: [
       [
         "Preparación del arroz:",
         "Después de haber remojado el arroz durante toda la noche, escúrrelo y enjuágalo bien bajo agua fría. Esto ayuda a eliminar el exceso de almidón y asegura que el risotto tenga la textura adecuada.",
@@ -168,61 +173,100 @@ const recipes = [
         "Sirve el risotto caliente, espolvoreado con un poco más de queso rallado si lo prefieres, y acompáñalo con un buen vino blanco.",
       ],
     ],
-    recipeImg: "(../../public/Recetas/risoto.jpg",
+    recipeImg: "../../public/Recetas/risoto.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/lNpqHQvrv5s?si=J0TP0tvpWZwDx5Ig",
   },
   //   {
   //     name: "torta",
   //     ingredients: [],
-  //     steps: ["paso 1", "paso 2", "paso 3"],
+  //     recipeInstructions:"",
+  //     recipeSteps: ["paso 1", "paso 2", "paso 3"],
   //     recipeImg: "url",
   //   },
   //   {
   //     name: "budin",
   //     ingredients: [],
-  //     steps: ["paso 1", "paso 2", "paso 3"],
+  //     recipeInstructions:"",
+  //     recipeSteps: ["paso 1", "paso 2", "paso 3"],
   //     recipeImg: "url",
   //   },
   //   {
   //     name: "brownie",
   //     ingredients: [],
-  //     steps: ["paso 1", "paso 2", "paso 3"],
+  //     recipeInstructions:"",
+  //     recipeSteps: ["paso 1", "paso 2", "paso 3"],
   //     recipeImg: "url",
   //   },
   //   {
   //     name: "galletitas de avena y banana",
   //     ingredients: [],
-  //     steps: ["paso 1", "paso 2", "paso 3"],
+  //     recipeInstructions:"",
+  //     recipeSteps: ["paso 1", "paso 2", "paso 3"],
   //     recipeImg: "url",
   //   },
   //   {
   //     name: "vitel tone",
   //     ingredients: [],
-  //     steps: ["paso 1", "paso 2", "paso 3"],
+  //     recipeInstructions:"",
+  //     recipeSteps: ["paso 1", "paso 2", "paso 3"],
   //     recipeImg: "url",
   //   },
   //   {
   //     name: "sopa",
   //     ingredients: [],
-  //     steps: ["paso 1", "paso 2", "paso 3"],
+  //     recipeInstructions:"",
+  //     recipeSteps: ["paso 1", "paso 2", "paso 3"],
   //     recipeImg: "url",
   //   },
   //   {
   //     name: "pato a la naranja",
   //     ingredients: [],
-  //     steps: ["paso 1", "paso 2", "paso 3"],
+  //     recipeInstructions:"",
+  //     recipeSteps: ["paso 1", "paso 2", "paso 3"],
   //     recipeImg: "url",
   //   },
 ];
-
-function searchRecepiName(nameRecepi) {
-  for (const recepi of recipes) {
-    if (recepi.name === nameRecepi) {
-      return recepi.name;
+function searchRecepiName() {
+  const recipeName = localStorage.getItem("name");
+  for (const recipe of recipes) {
+    if (recipe.name === recipeName) {
+      return recipe;
     }
   }
   return null;
 }
 
-console.log(searchRecepiName("pan de campo"));
+export function recipeInfo() {
+  const recepi = searchRecepiName();
+  if (recepi !== null) {
+    const ingredientes = recepi.ingredients;
+    const recepiImg = recepi.recipeImg;
+    const recipeInstructions = recepi.recipeInstructions;
+    const recepiName = recepi.name;
+    return { recepiName, ingredientes, recepiImg, recipeInstructions };
+  }
+  return null;
+}
+
+export function recipeVideo() {
+  const recepi = searchRecepiName();
+  if (recepi !== null) {
+    const recipeVideo = recepi.recipeVideo;
+    return { recipeVideo };
+  }
+  return null;
+}
+
+export function recipeSteps() {
+  const recepi = searchRecepiName();
+  if (recepi !== null) {
+    const recipeSteps = recepi.recipeSteps;
+    return { recipeSteps };
+  }
+  return null;
+}
+// console.log(searchRecepiName());
+// console.log(recipeInfo());
+// console.log(recipeVideo());
+// console.log(recipeSteps());

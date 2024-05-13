@@ -96,16 +96,18 @@
 </style>
 
 <script>
-  var iframe = document.createElement("iframe");
+  import { recipeVideo } from "../scripts/recepi.mjs";
+  const recipeUrl = recipeVideo().recipeVideo;
+
+  const iframe = document.createElement("iframe");
   iframe.classList.add("recepi-video");
 
-  iframe.src = "https://www.youtube.com/embed/Wl60CWse58U?si=24InbjNKzEy2P16T";
-  iframe.setAttribute(
-    "allow",
-    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
-  );
-  iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
-  iframe.setAttribute("allowfullscreen", "");
+  iframe.src = recipeUrl;
+  iframe.title = "YouTube video player";
+  iframe.allow =
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  iframe.allowFullscreen = true;
 
   document.querySelector(".interactions-with-the-recipe").appendChild(iframe);
 </script>

@@ -1,6 +1,16 @@
 ---
-import Subtitle from "./Subtitle.astro";
+
 ---
+
+<script>
+  import { recipeInfo } from "../scripts/recepi.mjs";
+  const p = document.querySelector(".instructions");
+  const img = document.querySelector(".recepi-img");
+  const instructions = recipeInfo().recipeInstructions;
+  const recepiImg = recipeInfo().recepiImg;
+  img.src = recepiImg;
+  p.innerHTML = instructions;
+</script>
 
 <article class="recepi">
   <h1 class="recepi-name"><i>PAN DE CAMPO</i></h1>
@@ -16,24 +26,10 @@ import Subtitle from "./Subtitle.astro";
       </ul>
 
       <h2 class="steps">Pasos:</h2>
-      <p>
-        Para preparar este delicioso pan de campo, comienza mezclando la
-        levadura con la harina y añadiendo el agua. Luego, tamiza la harina y
-        agrega la sal junto con el azúcar, mezclando bien. Añade la grasa y
-        mézclala con la harina hasta que se disuelva por completo. Una vez
-        integrados los ingredientes, agrega el fermento junto con el agua y
-        comienza a unir todo muy bien. Después de formar una masa lisa, déjala
-        reposar en un bol durante unos 30 minutos, o hasta que duplique su
-        volumen. Luego, forma un cilindro con la masa y córtala en el tamaño
-        deseado. Haz bollos y colócalos en una bandeja previamente aceitada.
-        Corta los panes y déjalos duplicar su tamaño. Finalmente, llévalos al
-        horno precalentado a 180 grados Celsius durante aproximadamente 25
-        minutos, o hasta que estén dorados y cocidos por completo. ¡Prepárate
-        para disfrutar de un pan de campo casero y delicioso!
-      </p>
+      <p class="instructions"></p>
     </section>
     <picture class="recepi-img-container">
-      <img src="../../public/Recetas/" alt="" class="recepi-img" />
+      <img src="../../public/Recetas/Pan.jpg" alt="" class="recepi-img" />
     </picture>
   </section>
 </article>
@@ -234,7 +230,7 @@ import Subtitle from "./Subtitle.astro";
     }
   }
 
-  @media (width > 1300px) {
+  @media (width > 1500px) {
     .recepi {
       grid-column: 2/4;
       width: 100%;
