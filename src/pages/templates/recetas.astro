@@ -1,6 +1,6 @@
 ---
 import HeaderAndFooter from "../../layouts/HeaderAndFooter.astro";
-import RecipeCard from "../../components/RecipeCard.astro";
+import Recipes from "../../components/Recipes.astro";
 import Subtitle from "../../components/Subtitle.astro";
 import RecommendedRecipes from "../../components/RecommendedRecipes.astro";
 ---
@@ -11,23 +11,17 @@ import RecommendedRecipes from "../../components/RecommendedRecipes.astro";
     <article class="recipes_container">
       <Subtitle>Recetas</Subtitle>
       <section class="recipes">
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
+        <Recipes />
       </section>
     </article>
   </main>
 </HeaderAndFooter>
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   main {
     grid-column: span 4;
     width: 100%;
@@ -41,14 +35,10 @@ import RecommendedRecipes from "../../components/RecommendedRecipes.astro";
     flex-direction: column;
 
     margin-bottom: 1.5em;
-
-    .recipes {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin: 0 auto;
-      gap: 1em;
-    }
   }
 </style>
+<script>
+  localStorage.setItem("name", "pato a la naranja");
+  import { categories } from "../../scripts/recipe.mjs";
+  categories();
+</script>

@@ -2,6 +2,23 @@
 
 ---
 
+<script>
+  import { recipeVideo } from "../scripts/recipe.mjs";
+  const recipeUrl = recipeVideo().recipeVideo;
+
+  const iframe = document.createElement("iframe");
+  iframe.classList.add("recepi-video");
+
+  iframe.src = recipeUrl;
+  iframe.title = "YouTube video player";
+  iframe.allow =
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  iframe.allowFullscreen = true;
+
+  document.querySelector(".interactions-with-the-recipe").appendChild(iframe);
+</script>
+
 <article class="interactions-with-the-recipe">
   <section class="save-share-print">
     <h2>Si te gusto la receta puedes:</h2>
@@ -94,20 +111,3 @@
     }
   }
 </style>
-
-<script>
-  import { recipeVideo } from "../scripts/recepi.mjs";
-  const recipeUrl = recipeVideo().recipeVideo;
-
-  const iframe = document.createElement("iframe");
-  iframe.classList.add("recepi-video");
-
-  iframe.src = recipeUrl;
-  iframe.title = "YouTube video player";
-  iframe.allow =
-    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-  iframe.referrerPolicy = "strict-origin-when-cross-origin";
-  iframe.allowFullscreen = true;
-
-  document.querySelector(".interactions-with-the-recipe").appendChild(iframe);
-</script>

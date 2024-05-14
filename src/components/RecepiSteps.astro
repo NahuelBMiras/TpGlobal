@@ -2,101 +2,47 @@
 
 ---
 
-<article class="recepi-steps">
-  <ul class="steps">
-    <li>
-      <li class="step-title">Preparación del Fermento:</li>
-      <ul>
-        <li>En un tazón grande, mezcla la levadura seca con la harina.</li>
-        <li>
-          Agrega el agua tibia y mezcla hasta obtener una masa homogénea. Deja
-          reposar durante 15-20 minutos para activar la levadura.
-        </li>
-      </ul>
-    </li>
+<script>
+  import { recipeSteps } from "../scripts/recipe.mjs";
+  const recipeStpsList = document.querySelector(".steps-list");
+  const recipeStpsText = recipeSteps().recipeSteps;
 
-    <li>
-      <li class="step-title">Preparación de la Masa:</li>
-      <ul>
-        <li>
-          Tamiza la harina en un tazón grande para asegurar que no haya grumos.
-        </li>
-        <li>
-          Agrega la sal fina y la grasa a la harina tamizada. Mezcla bien para
-          integrar los ingredientes.
-        </li>
-      </ul>
-    </li>
+  recipeStpsText.forEach((stepText) => {
+    const stepTextLenght = stepText.length;
+    const stepElemet = document.createElement("li");
+    stepElemet.classList.add("step");
+    recipeStpsList.appendChild(stepElemet);
 
-    <li>
-      <li class="step-title">Unión de Ingredientes:</li>
-      <ul>
-        <li>
-          Incorpora el fermento (mezcla de levadura, harina y agua) a la harina
-          y la grasa. Mezcla todo junto hasta formar una masa homogénea.
-        </li>
-      </ul>
-    </li>
+    const stepElementText = document.createElement("li");
+    stepElementText.classList.add("step-title");
+    stepElemet.appendChild(stepElementText);
+    stepElementText.innerHTML = stepText[0];
 
-    <li>
-      <li class="step-title">Fermentación de la Masa:</li>
-      <ul>
-        <li>Transfiere la masa a un recipiente ligeramente engrasado.</li>
-        <li>
-          Cubre el recipiente con un paño limpio y deja reposar la masa en un
-          lugar cálido durante aproximadamente 1 hora, o hasta que duplique su
-          volumen.
-        </li>
-      </ul>
-    </li>
+    const recipeSubstepsList = document.createElement("ul");
+    recipeSubstepsList.classList.add("recipe-substeps");
+    stepElemet.appendChild(recipeSubstepsList);
 
-    <li>
-      <li class="step-title">Formación de los Panes:</li>
-      <ul>
-        <li>
-          Después de que la masa haya duplicado su volumen, colócala sobre una
-          superficie de trabajo enharinada.
-        </li>
-        <li>
-          Forma un cilindro con la masa y córtalo en porciones del tamaño
-          deseado para los panes.
-        </li>
-        <li>
-          Forma bollos con cada porción y colócalos en una bandeja para hornear
-          previamente engrasada.
-        </li>
-        <li>
-          Cubre los bollos con un paño limpio y deja que vuelvan a duplicar su
-          tamaño durante unos 30 minutos.
-        </li>
-      </ul>
-    </li>
+    let i = 1;
+    while (i < stepTextLenght) {
+      const recipeSubsteps = document.createElement("li");
+      recipeSubstepsList.appendChild(recipeSubsteps);
+      recipeSubsteps.innerHTML = stepText[i];
+      i++;
+    }
+  });
 
-    <li>
-      <li class="step-title">Horneado:</li>
-      <ul>
-        <li>Precalienta el horno a 180 grados Celsius.</li>
-        <li>
-          Una vez que los bollos hayan duplicado su tamaño, coloca la bandeja en
-          el horno precalentado.
-        </li>
-        <li>
-          Hornea los panes durante aproximadamente 25 minutos, o hasta que estén
-          dorados y suenen huecos al golpear la parte inferior.
-        </li>
-      </ul>
-    </li>
-
-    <li>
-      <li class="step-title">Enfriamiento y Servir:</li>
-      <ul>
-        <li>
-          Retira los panes del horno y déjalos enfriar en una rejilla antes de
-          servir.
-        </li>
-      </ul>
-    </li>
-  </ul>
+  // let i = 0;
+  // const stepsElemets = document.querySelectorAll(".step");
+  // stepsElemets.forEach((stepElement) => {
+  //   const recipeStpsTextLenght = recipeStpsText[i].length;
+  //   const stepTitle = document.createElement("li");
+  //   stepElement.appendChild(stepTitle);
+  //   stepTitle.classList.add("step-title");
+  //   i++;
+  // });
+</script>
+<article class="recipe-steps">
+  <ul class="steps-list"></ul>
 </article>
 
 <style>
@@ -104,14 +50,14 @@
     margin: 0;
     padding: 0;
   }
-  .recepi-steps {
+  .recipe-steps {
     grid-column: 2/3;
     width: 90%;
 
     border-bottom: 1px solid black;
     margin-bottom: 1.5em;
 
-    .steps {
+    .steps-list {
       list-style: none;
 
       .step-title {
@@ -132,7 +78,7 @@
   }
 
   @media (width > 1300px) {
-    .recepi-steps {
+    .recipe-steps {
       grid-column: 2/3;
       border-bottom: none;
       border-right: 1px solid black;

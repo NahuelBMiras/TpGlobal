@@ -2,87 +2,77 @@
 
 ---
 
-<article class="recipe">
-  <a href="" class="link">
-    <picture class="recipe_container">
-      <img
-        src="../../public/food/alex-munsell-Yr4n8O_3UPc-unsplash.jpg"
-        alt=""
-        class="recipe_image"
-      />
-    </picture>
-    <section class="recipe_text_container">
-      <div class="recipe_text_container_top">
-        <h3 class="recipe_title">Receta</h3>
-        <i class="fa-solid fa-star"></i>
+<section class="recipe">
+  <a href="" class="recipe-link">
+    <div class="recipe-img-container">
+      <img src="../../public/Recetas/risoto.jpg" alt="Recipe 1" />
+      <div class="recipe-caption">
+        <h3 class="text">Pato a la naranja</h3>
+        <p class="text text-description">
+          ttttt ttttttttttttttttttttttttttttttttttttttttt
+        </p>
       </div>
-      <p class="recipe_text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, minus!
-        Ducimus nisi, asperiores tenetur sint cum fuga blanditiis molestias
-        mollitia nesciunt alias odio, quos ut eius obcaecati repellat, ipsum
-        iusto?
-      </p>
-    </section>
+    </div>
   </a>
-</article>
-
+</section>
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
   .recipe {
-    width: 80%;
-    max-width: 316px;
-    grid-column: span 2;
-
+    width: 90%;
+    aspect-ratio: 1/1;
+    max-width: 430px;
     &:hover {
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.658);
     }
-
-    .link {
-      text-decoration: none;
-      color: black;
-    }
-
-    .recipe_container {
-      max-width: 430px;
-    }
-
-    .recipe_image {
-      max-width: 430px;
+    .recipe-img-container {
+      aspect-ratio: 1/1;
       width: 100%;
-      aspect-ratio: 1.5/1;
-    }
+      position: relative;
+      bottom: 0;
+      left: 0;
+      align-items: center;
 
-    .recipe_text_container {
-      .recipe_text_container_top {
-        display: flex;
-        justify-content: space-between;
-        font-size: 1rem;
-        margin-top: 0.5em;
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
 
-        padding: 0 1em;
+      .recipe-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0.5em;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        transition: 0.5s ease;
+        box-sizing: border-box;
+        .text {
+          margin: 0;
+          text-align: center;
+          box-sizing: border-box;
+        }
 
-        .recipe_title {
-          margin-top: 0em;
-          margin-bottom: 0.6em;
+        .text-description {
+          margin-top: 0.3em;
+          display: none;
+          box-sizing: border-box;
         }
       }
-      .recipe_text {
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 3em;
-      }
     }
   }
 
-  /* .recipe:nth-last-child(-n+2) {
-    justify-self: flex-start;
-    margin: 0 auto 0 7.8em;
-}
-.recipe:nth-last-child(-n+1) {
-    justify-self: flex-start;
-    margin: 0 auto 0 -69.7em;
-} */
+  .recepi-container {
+    .recipe {
+      &:hover {
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
 </style>
