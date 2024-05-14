@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+main {
+  aspect-ratio: 1/1;
+}
 body {
   height: 100svh;
   font-family: "Roboto Slab", "Merriweather", serif;
@@ -75,6 +79,7 @@ nav ul li:hover a {
 /* Inicio Imagenes banner */
 .images_container {
   display: grid;
+  margin-bottom: 20%;
   grid-template-columns: auto 1fr 1fr;
   grid-gap: 10px;
   height: 20%;
@@ -115,7 +120,7 @@ h3 {
   height: 95vh;
   background-color: rgb(249, 248, 247);
   width: 100%;
-  padding-top: 1vh;
+  padding-top: 1em;
 }
 fieldset {
   border: 1px solid #ccc;
@@ -197,7 +202,7 @@ button:active {
   margin: 0 auto;
   margin-top: 2%;
   margin-bottom: 2%;
-  width: 55%;
+  width: 40%;
   height: 25%;
   overflow: hidden;
   background-color: black;
@@ -228,12 +233,12 @@ button:active {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 10%;
+  width: 15%;
   text-align: center;
   display: flex;
   align-items: center;
-  margin-right: 0.5%;
-  margin-left: 0.5%;
+  margin-right: 7%;
+  margin-left: 7%;
 }
 
 .boton-izquierda {
@@ -290,7 +295,7 @@ button:active {
   width: calc(33.33% - 20px);
   margin-bottom: 20px;
 }
-
+/* Modificar despues*/
 .recipe-img {
   position: relative;
   align-items: center;
@@ -332,6 +337,8 @@ footer {
 footer p {
   color: rgb(0, 1, 1);
   text-align: center;
+  text-align: center;
+
   margin-bottom: 0.5em;
   margin-top: 3em;
 }
@@ -344,14 +351,17 @@ footer img {
   .images_container {
     width: 100%;
     height: 5%;
-    margin-bottom: 0%;
+    margin-bottom: 25%;
   }
   .images_container .vertical_images img {
     width: 100%;
     height: 19.23%;
   }
+  .form_container {
+    margin-bottom: 1px;
+  }
   .carousel-container {
-    height: 10%;
+    height: 60%;
     width: 100%;
   }
   .boton-izquierda,
@@ -367,7 +377,7 @@ footer img {
     align-items: center;
   }
   .recipe {
-    width: 90%; 
+    width: 90%;
     margin-bottom: 10px;
   }
 
@@ -377,25 +387,56 @@ footer img {
     align-items: center;
   }
   .community_recipe {
-    width: 90%; 
+    width: 90%;
     margin-bottom: 20px;
   }
-
+  .recipe-img {
+    height: 25%;
+    width: 100%;
+  }
   .form_container {
-    padding: 20px; 
+    padding: 20px;
     margin-bottom: 25%;
   }
   .form_find_recipe {
-    width: 90%; 
+    width: 90%;
   }
 
   footer {
     align-items: baseline;
     padding-top: 20%;
+    text-align: center;
+  }
+  footer p{
+    text-align: center;
+    width: 100%;
   }
   footer img {
     width: 100%;
     height: 50px;
     margin-bottom: 0;
+  }
+}
+
+@media (width>600px) {
+  h2 {
+    margin-top: 10%;
+  }
+  .images_container {
+    height: 10%;
+  }
+  .recipes {
+    margin-bottom: 10%;
+  }
+
+  footer {
+    text-align: center;
+  }
+  footer p{
+    text-align: center;
+    width: 100%;
+  }
+  footer img {
+    height: 75%;
   }
 }
