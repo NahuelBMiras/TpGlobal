@@ -334,13 +334,20 @@ footer {
   width: 100%;
   background-color: white;
 }
+footer .redes{
+display: flex;
+padding: 0.5em;
+justify-content: center;
+font-size: x-large;
+gap: 1em;
+}
 footer p {
   color: rgb(0, 1, 1);
   text-align: center;
   text-align: center;
 
   margin-bottom: 0.5em;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 footer img {
   width: 100%;
@@ -407,6 +414,13 @@ footer img {
     padding-top: 20%;
     text-align: center;
   }
+  footer .redes{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    gap: 1em;
+    width: 100%;
+    }
   footer p{
     text-align: center;
     width: 100%;
@@ -431,6 +445,7 @@ footer img {
 
   footer {
     text-align: center;
+    margin-top: 2%;
   }
   footer p{
     text-align: center;
