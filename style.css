@@ -327,7 +327,6 @@ footer {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  border-top: 1px solid black;
   background-color: white;
 }
 footer p {
@@ -384,6 +383,7 @@ footer img {
   /* Ajuste del contenedor de Encuentra tu receta */
   .form_container {
     padding: 20px; /* Agregar espacio alrededor del formulario */
+    margin-bottom: 25%;
   }
   .form_find_recipe {
     width: 90%; /* Reducir el ancho del formulario */
