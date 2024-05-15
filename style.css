@@ -78,7 +78,8 @@ nav ul li:hover a {
   display: grid;
   grid-template-columns: auto 1fr 1fr;
   grid-gap: 10px;
-  height: 20%;
+  height: 15%;
+  margin-bottom: 5%;
 }
 
 .images_container img {
@@ -101,7 +102,6 @@ h2 {
   text-align: center;
   background-color: rgb(249, 248, 247);
   margin-bottom: 0.5%;
-  margin-top: 0.5%;
 }
 h3 {
   margin-top: 1%;
@@ -229,12 +229,12 @@ button:active {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 10%;
+  width: 15%;
   text-align: center;
   display: flex;
   align-items: center;
-  margin-right: 0.5%;
-  margin-left: 0.5%;
+  margin-right: 2em;
+  margin-left: 2em;
 }
 
 .boton-izquierda {
@@ -352,7 +352,7 @@ footer img {
   .images_container {
     width: 100%;
     height: 5%;
-    margin-bottom: 0%;
+    margin-bottom: 5%;
   }
   footer .redes {
     display: flex;
@@ -374,9 +374,9 @@ footer img {
   .boton-izquierda,
   .boton-derecha {
     position: absolute;
-    width: 17%;
-    margin-right: 9%;
-    margin-left: 5%;
+    width: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
   }
 
   .recipes {
@@ -410,13 +410,43 @@ footer img {
   }
 
   footer {
+    margin-top: 10%;
     align-items: baseline;
     padding-top: 20%;
-  }
+    text-align: center;
 
+    
+  }
+footer .redes{
+text-align: center;
+
+}
   footer img {
     width: 100%;
     height: 50px;
-    margin-bottom: 0;
+
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1118px) {
+
+footer{
+  text-align: center;
+
+  margin-top: 50%;
+}
+footer .redes{
+  text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1114px) and (max-width: 1788px) {
+  footer{
+  text-align: center;
+
+  margin-top: 20%;
+}
+footer .redes{
+  text-align: center;
+  }
+} 
