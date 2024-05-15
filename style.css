@@ -432,26 +432,3 @@ footer img {
   }
 }
 
-@media (width>600px) {
-  h2 {
-    margin-top: 10%;
-  }
-  .images_container {
-    height: 10%;
-  }
-  .recipes {
-    margin-bottom: 10%;
-  }
-
-  footer {
-    text-align: center;
-    margin-top: 2%;
-  }
-  footer p{
-    text-align: center;
-    width: 100%;
-  }
-  footer img {
-    height: 75%;
-  }
-}
