@@ -11,6 +11,7 @@
     "lint": "astro dev"
   },
   "dependencies": {
+    "@astrojs/netlify": "^5.2.1",
     "astro": "^4.7.1"
   },
   "devDependencies": {
