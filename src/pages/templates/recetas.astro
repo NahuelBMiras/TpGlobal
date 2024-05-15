@@ -5,6 +5,22 @@ import Subtitle from "../../components/Subtitle.astro";
 import RecommendedRecipes from "../../components/RecommendedRecipes.astro";
 ---
 
+<script>
+  import {
+    recipeInfo,
+    recipeVideo,
+    recipeSteps,
+    recepiDescription,
+    categories,
+  } from "../../scripts/recipe.mjs";
+  recipeInfo();
+  recipeVideo();
+  recipeSteps();
+  recepiDescription();
+  categories();
+
+  localStorage.setItem("name", "pato a la naranja");
+</script>
 <HeaderAndFooter title="MRR Recetas">
   <main>
     <RecommendedRecipes subtitle="Recetas Recomendadas" />
@@ -37,8 +53,3 @@ import RecommendedRecipes from "../../components/RecommendedRecipes.astro";
     margin-bottom: 1.5em;
   }
 </style>
-<script>
-  localStorage.setItem("name", "pato a la naranja");
-  import { categories } from "../../components/recipe.mjs";
-  categories();
-</script>

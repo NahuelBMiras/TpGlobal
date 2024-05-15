@@ -71,7 +71,18 @@ import RecipeCard from "../components/Recipes.astro";
   </main>
 </HeaderAndFooter>
 <script>
-  // localStorage.setItem("name", "pan de campo");
+  import {
+    recipeInfo,
+    recipeVideo,
+    recipeSteps,
+    recepiDescription,
+    categories,
+  } from "../scripts/recipe.mjs";
+  recipeInfo();
+  recipeVideo();
+  recipeSteps();
+  recepiDescription();
+  categories();
 </script>
 <style>
   * {

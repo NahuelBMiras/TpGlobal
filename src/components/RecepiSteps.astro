@@ -3,7 +3,7 @@
 ---
 
 <script>
-  import { recipeSteps } from "../components/recipe.js";
+  import { recipeSteps } from "../scripts/recipe.mjs";
   const recipeStpsList = document.querySelector(".steps-list");
   const recipeStpsText = recipeSteps().recipeSteps;
 
@@ -30,16 +30,6 @@
       i++;
     }
   });
-
-  // let i = 0;
-  // const stepsElemets = document.querySelectorAll(".step");
-  // stepsElemets.forEach((stepElement) => {
-  //   const recipeStpsTextLenght = recipeStpsText[i].length;
-  //   const stepTitle = document.createElement("li");
-  //   stepElement.appendChild(stepTitle);
-  //   stepTitle.classList.add("step-title");
-  //   i++;
-  // });
 </script>
 <article class="recipe-steps">
   <ul class="steps-list"></ul>

@@ -1,175 +1,222 @@
 ---
 
 ---
-<!DOCTYPE html>
+
+<script>
+  import {
+    recipeInfo,
+    recipeVideo,
+    recipeSteps,
+    recepiDescription,
+    categories,
+  } from "../../scripts/recipe.mjs";
+  recipeInfo();
+  recipeVideo();
+  recipeSteps();
+  recepiDescription();
+  categories();
+</script>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/paleta_de_colores.css">
-</head>
+    <link rel="stylesheet" href="../styles/paleta_de_colores.css" />
+  </head>
 
-<body>
-
-<article>
-    <section class="combinacion_1">
+  <body>
+    <article>
+      <section class="combinacion_1">
         <div class="combinacion_1_color_1">rgba(230,218,206,255)</div>
         <div class="combinacion_1_color_2">rgba(88,57,39,255)</div>
         <div class="combinacion_1_color_3">rgba(221,166,76,255)</div>
         <div class="combinacion_1_color_4">rgba(159,82,38,255)</div>
         <div class="combinacion_1_color_5">rgba(202,163,130,255)</div>
-    </section>
-    <section class="combinacion_2">
+      </section>
+      <section class="combinacion_2">
         <div class="combinacion_2_color_1">rgba(210,200,191,255)</div>
         <div class="combinacion_2_color_2">rgba(45,36,37,255)</div>
         <div class="combinacion_2_color_3">rgba(167,92,35,255)</div>
         <div class="combinacion_2_color_4">rgba(215,168,96,255)</div>
         <div class="combinacion_2_color_5">rgba(140,118,105,255)</div>
-    </section>
-    <section class="combinacion_3">
+      </section>
+      <section class="combinacion_3">
         <div class="combinacion_3_color_1">rgba(252,251,249,255)</div>
         <div class="combinacion_3_color_2">rgba(193,88,30,255)</div>
         <div class="combinacion_3_color_3">rgba(232,164,57,255)</div>
         <div class="combinacion_3_color_4">rgba(219,182,138,255)</div>
         <div class="combinacion_3_color_5">rgba(123,69,41,255)</div>
-    </section>
-    <section>
+      </section>
+      <section>
         <div class="negro">rgba(0, 0, 0, 1)</div>
         <div class="gris_oscuro">rgba(204, 204, 204, 1)</div>
         <div class="gris">rgba(153, 153, 153, 1)</div>
         <div class="gris_claro">rgba(102, 102, 102, 1)</div>
         <div class="blanco">rgba(255, 255, 255, 1)</div>
-    </section>
-</article>
+      </section>
+    </article>
 
-<h2>
-    Paletas de colores
-</h2>
-<article class="combinaciones">
-    <section>
+    <h2>Paletas de colores</h2>
+    <article class="combinaciones">
+      <section>
         <div class="negro">rgba(0, 0, 0, 1)</div>
         <div class="gris_oscuro">rgba(204, 204, 204, 1)</div>
         <div class="gris">rgba(153, 153, 153, 1)</div>
         <div class="gris_claro">rgba(102, 102, 102, 1)</div>
         <div class="blanco">rgba(255, 255, 255, 1)</div>
-    </section>
-    <section class="combinacion_1">
+      </section>
+      <section class="combinacion_1">
         <div class="combinacion_1_color_1">rgba(230,218,206,255)</div>
         <div class="combinacion_1_color_2">rgba(88,57,39,255)</div>
         <div class="combinacion_1_color_3">rgba(221,166,76,255)</div>
         <div class="combinacion_1_color_4">rgba(159,82,38,255)</div>
         <div class="combinacion_1_color_5">rgba(202,163,130,255)</div>
-    </section>
-    <ul>
+      </section>
+      <ul>
         <li>
-            <span class="combinacion_1_color_1_text">rgba(230,218,206,255):</span> Este tono suave y neutro podría ser ideal para fondos de secciones o áreas de contenido principales, ya que proporciona una sensación de calma y elegancia.
+          <span class="combinacion_1_color_1_text">rgba(230,218,206,255):</span>
+          Este tono suave y neutro podría ser ideal para fondos de secciones o áreas
+          de contenido principales, ya que proporciona una sensación de calma y elegancia.
         </li>
         <li>
-            <span class="combinacion_1_color_2_text">rgba(88,57,39,255):</span> Este color oscuro y cálido podría ser utilizado para encabezados principales o títulos destacados, creando contraste y enfatizando la jerarquía visual.
+          <span class="combinacion_1_color_2_text">rgba(88,57,39,255):</span> Este
+          color oscuro y cálido podría ser utilizado para encabezados principales
+          o títulos destacados, creando contraste y enfatizando la jerarquía visual.
         </li>
         <li>
-            <span class="combinacion_1_color_3_text">rgba(221,166,76,255):</span> Este tono de oro o marrón claro podría ser perfecto para botones de llamada a la acción o para resaltar elementos importantes que deseas que los usuarios noten rápidamente.
+          <span class="combinacion_1_color_3_text">rgba(221,166,76,255):</span> Este
+          tono de oro o marrón claro podría ser perfecto para botones de llamada
+          a la acción o para resaltar elementos importantes que deseas que los usuarios
+          noten rápidamente.
         </li>
         <li>
-            <span class="combinacion_1_color_4_text">rgba(159,82,38,255): </span>Podría utilizarse para detalles decorativos o elementos secundarios que necesitan destacar sin ser demasiado llamativos, como iconos o líneas de separación.
+          <span class="combinacion_1_color_4_text"
+            >rgba(159,82,38,255):
+          </span>Podría utilizarse para detalles decorativos o elementos
+          secundarios que necesitan destacar sin ser demasiado llamativos, como
+          iconos o líneas de separación.
         </li>
         <li>
-            <span class="combinacion_1_color_5_text">rgba(202,163,130,255):</span> Este tono más claro y cálido podría ser útil para el texto principal, proporcionando una excelente legibilidad sobre fondos más oscuros o complementando los tonos más intensos de la paleta.
+          <span class="combinacion_1_color_5_text">rgba(202,163,130,255):</span>
+          Este tono más claro y cálido podría ser útil para el texto principal, proporcionando
+          una excelente legibilidad sobre fondos más oscuros o complementando los
+          tonos más intensos de la paleta.
         </li>
-    </ul>
-</article>
+      </ul>
+    </article>
 
-<article class="combinaciones">
-    <section>
+    <article class="combinaciones">
+      <section>
         <div class="negro">rgba(0, 0, 0, 1)</div>
         <div class="gris_oscuro">rgba(204, 204, 204, 1)</div>
         <div class="gris">rgba(153, 153, 153, 1)</div>
         <div class="gris_claro">rgba(102, 102, 102, 1)</div>
         <div class="blanco">rgba(255, 255, 255, 1)</div>
-    </section>
-    <section class="combinacion_2">
+      </section>
+      <section class="combinacion_2">
         <div class="combinacion_2_color_1">rgba(210,200,191,255)</div>
         <div class="combinacion_2_color_2">rgba(45,36,37,255)</div>
         <div class="combinacion_2_color_3">rgba(167,92,35,255)</div>
         <div class="combinacion_2_color_4">rgba(215,168,96,255)</div>
         <div class="combinacion_2_color_5">rgba(140,118,105,255)</div>
-    </section>
-    <ul>
+      </section>
+      <ul>
         <li>
-            <span class="combinacion_2_color_1_text">rgba(210,200,191,255):</span> Este color neutro y suave podría ser utilizado para fondos de secciones o áreas de contenido secundarias, proporcionando una base neutral y limpia para el diseño.
+          <span class="combinacion_2_color_1_text">rgba(210,200,191,255):</span>
+          Este color neutro y suave podría ser utilizado para fondos de secciones
+          o áreas de contenido secundarias, proporcionando una base neutral y limpia
+          para el diseño.
         </li>
         <li>
-            <span class="combinacion_2_color_2_text">rgba(45,36,37,255):</span> Podría ser útil para texto principal o secundario, ofreciendo una excelente legibilidad sobre fondos claros y contrastando con colores más claros de la paleta.
+          <span class="combinacion_2_color_2_text">rgba(45,36,37,255):</span> Podría
+          ser útil para texto principal o secundario, ofreciendo una excelente legibilidad
+          sobre fondos claros y contrastando con colores más claros de la paleta.
         </li>
         <li>
-            <span class="combinacion_2_color_3_text">rgba(167,92,35,255):</span> Este tono de naranja oscuro podría ser utilizado para botones de llamada a la acción o para resaltar elementos importantes que deseas que los usuarios noten rápidamente.
+          <span class="combinacion_2_color_3_text">rgba(167,92,35,255):</span> Este
+          tono de naranja oscuro podría ser utilizado para botones de llamada a la
+          acción o para resaltar elementos importantes que deseas que los usuarios
+          noten rápidamente.
         </li>
         <li>
-            <span class="combinacion_2_color_4_text">rgba(215,168,96,255):</span> Este tono de marrón o beige podría ser útil para detalles decorativos o elementos secundarios que necesitan destacar sin ser demasiado llamativos, como iconos o líneas de separación.
+          <span class="combinacion_2_color_4_text">rgba(215,168,96,255):</span> Este
+          tono de marrón o beige podría ser útil para detalles decorativos o elementos
+          secundarios que necesitan destacar sin ser demasiado llamativos, como iconos
+          o líneas de separación.
         </li>
         <li>
-            <span class="combinacion_2_color_5_text">rgba(140,118,105,255):</span> Podría ser utilizado para texto secundario o detalles adicionales, ofreciendo un contraste sutil pero efectivo sobre fondos más claros.
+          <span class="combinacion_2_color_5_text">rgba(140,118,105,255):</span>
+          Podría ser utilizado para texto secundario o detalles adicionales, ofreciendo
+          un contraste sutil pero efectivo sobre fondos más claros.
         </li>
-    </ul>
-</article>
+      </ul>
+    </article>
 
-<article class="combinaciones">
-    <section>
+    <article class="combinaciones">
+      <section>
         <div class="negro">rgba(0, 0, 0, 1)</div>
         <div class="gris_oscuro">rgba(204, 204, 204, 1)</div>
         <div class="gris">rgba(153, 153, 153, 1)</div>
         <div class="gris_claro">rgba(102, 102, 102, 1)</div>
         <div class="blanco">rgba(255, 255, 255, 1)</div>
-    </section>
-    <section class="combinacion_3">
+      </section>
+      <section class="combinacion_3">
         <div class="combinacion_3_color_1">rgba(252,251,249,255)</div>
         <div class="combinacion_3_color_2">rgba(193,88,30,255)</div>
         <div class="combinacion_3_color_3">rgba(232,164,57,255)</div>
         <div class="combinacion_3_color_4">rgba(219,182,138,255)</div>
         <div class="combinacion_3_color_5">rgba(123,69,41,255)</div>
-    </section>
-    <ul>
+      </section>
+      <ul>
         <li>
-            <span class="combinacion_3_color_1_text">rgba(252,251,249,255)</span>rgba(252,251,249,255): Este color blanco casi puro podría ser utilizado para fondos de áreas de contenido o espacios en blanco, manteniendo una apariencia limpia y minimalista.
+          <span class="combinacion_3_color_1_text">rgba(252,251,249,255)</span
+          >rgba(252,251,249,255): Este color blanco casi puro podría ser
+          utilizado para fondos de áreas de contenido o espacios en blanco,
+          manteniendo una apariencia limpia y minimalista.
         </li>
         <li>
-            <span class="combinacion_3_color_2_text">rgba(193,88,30,255):</span> Podría ser utilizado para encabezados principales o títulos destacados, ofreciendo un contraste fuerte y llamativo sobre fondos más claros.
+          <span class="combinacion_3_color_2_text">rgba(193,88,30,255):</span> Podría
+          ser utilizado para encabezados principales o títulos destacados, ofreciendo
+          un contraste fuerte y llamativo sobre fondos más claros.
         </li>
         <li>
-            <span class="combinacion_3_color_3_text">rgba(232,164,57,255):</span> Este tono de naranja o dorado podría ser utilizado para botones de llamada a la acción o para resaltar elementos importantes que deseas que los usuarios noten rápidamente.
+          <span class="combinacion_3_color_3_text">rgba(232,164,57,255):</span> Este
+          tono de naranja o dorado podría ser utilizado para botones de llamada a
+          la acción o para resaltar elementos importantes que deseas que los usuarios
+          noten rápidamente.
         </li>
         <li>
-            <span class="combinacion_3_color_4_text">rgba(219,182,138,255):</span> Este color neutro y suave podría ser útil para fondos de secciones o áreas de contenido secundarias, proporcionando una base neutral y cálida para el diseño.
+          <span class="combinacion_3_color_4_text">rgba(219,182,138,255):</span>
+          Este color neutro y suave podría ser útil para fondos de secciones o áreas
+          de contenido secundarias, proporcionando una base neutral y cálida para
+          el diseño.
         </li>
         <li>
-            <span class="combinacion_3_color_5_text">rgba(123,69,41,255):</span> Podría ser utilizado para texto secundario o detalles adicionales, ofreciendo un contraste sutil pero efectivo sobre fondos más claros.
+          <span class="combinacion_3_color_5_text">rgba(123,69,41,255):</span> Podría
+          ser utilizado para texto secundario o detalles adicionales, ofreciendo
+          un contraste sutil pero efectivo sobre fondos más claros.
         </li>
-    </ul>
-</article>
-
-
-</body>
-
+      </ul>
+    </article>
+  </body>
 </html>
 
 <style>
-    * {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+  }
 
-    body {
+  body {
     height: 100svh;
-    }
+  }
 
-    h2 {
+  h2 {
     text-align: center;
-    }
+  }
 
-    section {
+  section {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -177,33 +224,33 @@
     padding: 1em;
 
     div {
-        border: 1px solid purple;
-        width: 20%;
-        aspect-ratio: 2/1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 0.3em;
+      border: 1px solid purple;
+      width: 20%;
+      aspect-ratio: 2/1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.3em;
     }
     .negro {
-        background-color: rgba(0, 0, 0, 1);
-        color: white;
+      background-color: rgba(0, 0, 0, 1);
+      color: white;
     }
     .gris_oscuro {
-        background-color: rgba(204, 204, 204, 1);
+      background-color: rgba(204, 204, 204, 1);
     }
     .gris {
-        background-color: rgba(153, 153, 153, 1);
+      background-color: rgba(153, 153, 153, 1);
     }
     .gris_claro {
-        background-color: rgba(102, 102, 102, 1);
+      background-color: rgba(102, 102, 102, 1);
     }
     .blanco {
-        background-color: rgba(255, 255, 255, 1);
+      background-color: rgba(255, 255, 255, 1);
     }
-    }
+  }
 
-    .combinaciones {
+  .combinaciones {
     margin: 1em;
     display: flex;
     justify-content: center;
@@ -211,115 +258,114 @@
     align-items: center;
 
     ul {
-        margin-top: 1em;
-        margin-bottom: 2em;
-        border-top: 1px solid black;
+      margin-top: 1em;
+      margin-bottom: 2em;
+      border-top: 1px solid black;
 
-        li {
+      li {
         margin-top: 1em;
         margin-bottom: 0.8em;
-        }
+      }
     }
-    }
+  }
 
-    .combinacion_1 {
-        .combinacion_1_color_1 {
-            background-color: rgba(230, 218, 206, 255);
-        }
-        .combinacion_1_color_2 {
-            background-color: rgba(88, 57, 39, 255);
-        }
-        .combinacion_1_color_3 {
-            background-color: rgba(221, 166, 76, 255);
-        }
-        .combinacion_1_color_4 {
-            background-color: rgba(159, 82, 38, 255);
-        }
-        .combinacion_1_color_5 {
-            background-color: rgba(202, 163, 130, 255);
-        }
+  .combinacion_1 {
+    .combinacion_1_color_1 {
+      background-color: rgba(230, 218, 206, 255);
     }
-    .combinacion_1_color_1_text{
-        color: rgba(230, 218, 206, 255);
+    .combinacion_1_color_2 {
+      background-color: rgba(88, 57, 39, 255);
     }
-    .combinacion_1_color_2_text{
-        color: rgba(88, 57, 39, 255);
+    .combinacion_1_color_3 {
+      background-color: rgba(221, 166, 76, 255);
     }
-    .combinacion_1_color_3_text{
-        color: rgba(221, 166, 76, 255);
+    .combinacion_1_color_4 {
+      background-color: rgba(159, 82, 38, 255);
     }
-    .combinacion_1_color_4_text{
-        color: rgba(159, 82, 38, 255);
+    .combinacion_1_color_5 {
+      background-color: rgba(202, 163, 130, 255);
     }
-    .combinacion_1_color_5_text{
-        color: rgba(202, 163, 130, 255);
-    }
+  }
+  .combinacion_1_color_1_text {
+    color: rgba(230, 218, 206, 255);
+  }
+  .combinacion_1_color_2_text {
+    color: rgba(88, 57, 39, 255);
+  }
+  .combinacion_1_color_3_text {
+    color: rgba(221, 166, 76, 255);
+  }
+  .combinacion_1_color_4_text {
+    color: rgba(159, 82, 38, 255);
+  }
+  .combinacion_1_color_5_text {
+    color: rgba(202, 163, 130, 255);
+  }
 
-    .combinacion_2 {
-        .combinacion_2_color_1 {
-            background-color: rgba(210, 200, 191, 255);
-        }
-        .combinacion_2_color_2 {
-            background-color: rgba(45, 36, 37, 255);
-        }
-        .combinacion_2_color_3 {
-            background-color: rgba(167, 92, 35, 255);
-        }
-        .combinacion_2_color_4 {
-            background-color: rgba(215, 168, 96, 255);
-        }
-        .combinacion_2_color_5 {
-            background-color: rgba(140, 118, 105, 255);
-        }
+  .combinacion_2 {
+    .combinacion_2_color_1 {
+      background-color: rgba(210, 200, 191, 255);
     }
-    .combinacion_2_color_1_text{
-        color: rgba(210, 200, 191, 255);
+    .combinacion_2_color_2 {
+      background-color: rgba(45, 36, 37, 255);
     }
-    .combinacion_2_color_2_text{
-        color: rgba(45, 36, 37, 255);
+    .combinacion_2_color_3 {
+      background-color: rgba(167, 92, 35, 255);
     }
-    .combinacion_2_color_3_text{
-        color: rgba(167, 92, 35, 255);
+    .combinacion_2_color_4 {
+      background-color: rgba(215, 168, 96, 255);
     }
-    .combinacion_2_color_4_text{
-        color: rgba(215, 168, 96, 255);
+    .combinacion_2_color_5 {
+      background-color: rgba(140, 118, 105, 255);
     }
-    .combinacion_2_color_5_text{
-        color: rgba(140, 118, 105, 255);
-    }
+  }
+  .combinacion_2_color_1_text {
+    color: rgba(210, 200, 191, 255);
+  }
+  .combinacion_2_color_2_text {
+    color: rgba(45, 36, 37, 255);
+  }
+  .combinacion_2_color_3_text {
+    color: rgba(167, 92, 35, 255);
+  }
+  .combinacion_2_color_4_text {
+    color: rgba(215, 168, 96, 255);
+  }
+  .combinacion_2_color_5_text {
+    color: rgba(140, 118, 105, 255);
+  }
 
-    .combinacion_3 {
-        .combinacion_3_color_1 {
-            background-color: rgba(252, 251, 249, 255);
-        }
-        .combinacion_3_color_2 {
-            background-color: rgba(193, 88, 30, 255);
-        }
-        .combinacion_3_color_3 {
-            background-color: rgba(232, 164, 57, 255);
-        }
-        .combinacion_3_color_4 {
-            background-color: rgba(219, 182, 138, 255);
-        }
-        .combinacion_3_color_5 {
-            background-color: rgba(123, 69, 41, 255);
-        }
+  .combinacion_3 {
+    .combinacion_3_color_1 {
+      background-color: rgba(252, 251, 249, 255);
     }
-    .combinacion_3_color_1_text{
-        color: rgba(252, 251, 249, 255);
-        background-color: black;
+    .combinacion_3_color_2 {
+      background-color: rgba(193, 88, 30, 255);
     }
-    .combinacion_3_color_2_text{
-        color: rgba(193, 88, 30, 255);
+    .combinacion_3_color_3 {
+      background-color: rgba(232, 164, 57, 255);
     }
-    .combinacion_3_color_3_text{
-        color: rgba(232, 164, 57, 255);
+    .combinacion_3_color_4 {
+      background-color: rgba(219, 182, 138, 255);
     }
-    .combinacion_3_color_4_text{
-        color: rgba(219, 182, 138, 255);
+    .combinacion_3_color_5 {
+      background-color: rgba(123, 69, 41, 255);
     }
-    .combinacion_3_color_5_text{
-        color: rgba(123, 69, 41, 255);
-    }
-    
+  }
+  .combinacion_3_color_1_text {
+    color: rgba(252, 251, 249, 255);
+    background-color: black;
+  }
+  .combinacion_3_color_2_text {
+    color: rgba(193, 88, 30, 255);
+  }
+  .combinacion_3_color_3_text {
+    color: rgba(232, 164, 57, 255);
+  }
+  .combinacion_3_color_4_text {
+    color: rgba(219, 182, 138, 255);
+  }
+  .combinacion_3_color_5_text {
+    color: rgba(123, 69, 41, 255);
+  }
 </style>
