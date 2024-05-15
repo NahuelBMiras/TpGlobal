@@ -539,6 +539,7 @@ export function recepiDescription() {
 
 export function categories() {
   const storedRecipe = searchRecepiName();
+  const recepiArray = recipes;
   const recipeStoredCategories = storedRecipe.categories;
   const matchingRecipesAndStoredRecipe = [];
   recipes.forEach((recipe) => {
@@ -547,11 +548,14 @@ export function categories() {
       recipeCategories.includes(item),
     );
     if (searchMatches) {
-      matchingRecipesAndStoredRecipe.push(recipe.name);
+      matchingRecipesAndStoredRecipe.push(recipe);
     }
   });
   const matchingRecipes = matchingRecipesAndStoredRecipe.filter(
-    (match) => match !== storedRecipe.name,
+    (match) => match !== storedRecipe,
   );
-  return matchingRecipes;
+
+  console.log(matchingRecipes);
+
+  return { matchingRecipes, recepiArray };
 }

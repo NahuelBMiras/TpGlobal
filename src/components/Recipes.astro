@@ -3,7 +3,7 @@
 ---
 
 <script>
-  import { recipeInfo, recepiDescription } from "../scripts/recipe.mjs";
+  import { recepiDescription } from "../scripts/recipe.mjs";
 
   const recepiContainer = document.querySelector(".recepi-container");
   const recipeDescriptionElement = recepiDescription().recepiArray;
@@ -51,7 +51,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    flex-direction: column;
+    gap: 1.5em;
     width: 100%;
     flex-wrap: wrap;
     cursor: pointer;
@@ -62,6 +63,9 @@
       width: 80%;
       aspect-ratio: 1/1;
       max-width: 430px;
+      border-radius: 1em;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.658);
+      overflow: hidden;
 
       &:hover {
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.658);
@@ -74,7 +78,6 @@
         bottom: 0;
         left: 0;
         align-items: center;
-
         img {
           width: 100%;
           aspect-ratio: 1/1;
@@ -102,6 +105,7 @@
             margin-top: 0.3em;
             display: none;
             box-sizing: border-box;
+            padding: 0.7em;
           }
         }
       }
@@ -115,6 +119,78 @@
           .recipe-caption {
             .text-description {
               display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 822px) {
+    .recepi-container {
+      flex-direction: row;
+      .recipe {
+        width: 45%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 1300px) {
+    .recepi-container {
+      flex-direction: row;
+      .recipe {
+        width: 30%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 1416px) {
+    .recepi-container {
+      .recipe {
+        width: 25%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 1700px) {
+    .recepi-container {
+      .recipe {
+        width: 21%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 1900px) {
+    .recepi-container {
+      .recipe {
+        width: 21%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
             }
           }
         }
