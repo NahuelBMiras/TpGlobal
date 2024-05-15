@@ -3,7 +3,7 @@
 ---
 
 <script>
-  import { recipeInfo } from "../scripts/recipe.mjs";
+  import { recipeInfo } from "../../public/recipe.mjs";
 
   const ingredientsList = document.querySelector(".ingredients-list");
   const ingredientsText = recipeInfo().ingredients;
@@ -38,7 +38,7 @@
       <p class="instructions"></p>
     </section>
     <picture class="recipe-img-container">
-      <img src="../../public/Recetas/Pan.jpg" alt="" class="recipe-img" />
+      <img src="/public/Recetas/Pan.jpg" alt="" class="recipe-img" />
     </picture>
   </section>
 </article>

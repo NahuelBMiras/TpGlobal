@@ -1,6 +1,6 @@
 const recipes = [
   {
-    name: "Pizza a la Piedra",
+    name: "pizza a la piedra",
     ingredients: [
       "1 kg harina 000",
       "60 g levadura prensada",
@@ -50,16 +50,16 @@ const recipes = [
         "Coloca la pizza en un nivel superior para que se termine de cocinar y se derrita el queso.",
       ],
     ],
-    recipeImg: "../../public/Recetas/pizza.jpg",
+    recipeImg: "/public/Recetas/pizza.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/G3LmiPpjMgY?si=4pcii-ldTIPEHMZa",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Descubre cómo preparar una deliciosa pizza casera con masa crujiente y sabrosa utilizando harina, levadura, sal, azúcar, agua y manteca. ¡Una receta clásica que nunca falla!",
     categories: ["salado", "plato principal"],
   },
   {
-    name: "Milanesas de Soja",
+    name: "milanesas de soja",
     ingredients: [
       "1 taza de proteína texturizada de soja",
       "1 taza de pan rallado",
@@ -96,16 +96,16 @@ const recipes = [
         "Retira las milanesas del aceite y colócalas sobre papel absorbente para eliminar el exceso de grasa.",
       ],
     ],
-    recipeImg: "../../public/Recetas/Milanesas.png",
+    recipeImg: "/public/Recetas/Milanesas.png",
     recipeVideo:
       "https://www.youtube.com/embed/Wl60CWse58U?si=b0yiL58sShyQBj-T",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Prepara unas irresistibles Milanesas de Soja, una opción vegetariana llena de sabor con proteína texturizada de soja, pan rallado, huevo (o sustituto), ajo, pimentón, orégano y especias. ¡Una alternativa sabrosa para cualquier ocasión!",
     categories: ["vegetariano", "plato principal"],
   },
   {
-    name: "Pan de Campo",
+    name: "pan de campo",
     ingredients: [
       "10 gramos de levadura seca",
       "500 gramos de harina común",
@@ -143,16 +143,16 @@ const recipes = [
         "Cuando hayan duplicado su tamaño se deben llevar a un horno precalentado a 180 grados por 25 minutos aproximadamente. El tiempo de horneado puede variar según el horno, es importante verificar la cocción antes de sacarlos del horno. Puedes hacer insertando un palillo en el centro del pan. Si sale limpio y seco, significa que el pan está listo. Si el palillo sale con migas húmedas o masa pegajosa, es necesario hornearlo por más tiempo.",
       ],
     ],
-    recipeImg: "../../public/Recetas/Pan.jpg",
+    recipeImg: "/public/Recetas/Pan.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/TisLykAy050?si=da3BXNqJnm0Odd2w",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Disfruta de un auténtico Pan de Campo, con una receta simple que combina levadura seca, harina, sal, grasa y agua tibia. El complemento perfecto para cualquier comida.",
     categories: ["panadería", "acompañamiento"],
   },
   {
-    name: "Risotto",
+    name: "risotto",
     ingredients: [
       "150 g (crudo) arroz yamaní integral",
       "3/4 copa vino",
@@ -194,10 +194,10 @@ const recipes = [
         "Sirve el risotto caliente, espolvoreado con un poco más de queso rallado si lo prefieres, y acompáñalo con un buen vino blanco.",
       ],
     ],
-    recipeImg: "../../public/Recetas/risoto.jpg",
+    recipeImg: "/public/Recetas/risoto.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/lNpqHQvrv5s?si=J0TP0tvpWZwDx5Ig",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Descubre el exquisito sabor del Risotto con una base de arroz yamaní integral, realzado con champiñones frescos. Esta receta también incluye vino, caldo, vegetales frescos y una deliciosa pasta de ajo. ¡Una experiencia culinaria que no te puedes perder, especialmente por los champiñones que añaden un toque de sabor único!",
     categories: ["salado", "plato principal"],
@@ -238,16 +238,16 @@ const recipes = [
         "Pasado el tiempo, desmoldar y decorar por arriba con galletas.",
       ],
     ],
-    recipeImg: "../../public/Recetas/torta-oreo.jpg",
+    recipeImg: "/public/Recetas/torta-oreo.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/lnaPrAcsMgY?si=a3Q3QY6uJxFmKcjr",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Disfruta de una Tentadora Torta Oreo, con una base de galletas trituradas y manteca, rellena con una mezcla cremosa de queso crema, crema de leche y galletas Oreo. Perfectamente equilibrada en sabor y textura, esta delicia es el postre ideal para cualquier ocasión especial. ¡No podrás resistirte a cada bocado!",
     categories: ["postre", "dulce"],
   },
   {
-    name: "Budín de Vainilla",
+    name: "budín de vainilla",
     ingredients: [
       " 2 tazas de harina leudante.",
       "2 huevos.",
@@ -271,16 +271,16 @@ const recipes = [
         "Llevar a horno moderado 180° por más o menos 40 o 45 minutos (siempre depende mucho de cada horno). Chequear su cocción con un palito de madera, al pinchar el budín de vainilla el palito debe salir seco.",
       ],
     ],
-    recipeImg: "../../public/Recetas/budin-de-vainilla.jpg",
+    recipeImg: "/public/Recetas/budin-de-vainilla.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/kbTzawpD29w?si=njLGY9U4p8AR3dGb",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Prepara un irresistible Budín de Vainilla, suave y esponjoso, con una mezcla de harina leudante, huevos, azúcar, aceite y una pizca de esencia de vainilla. Un clásico que deleita en cada bocado, ideal para compartir en cualquier ocasión.",
     categories: ["postre", "dulce"],
   },
   {
-    name: "Brownie",
+    name: "brownie",
     ingredients: [
       "100g. de manteca",
       "1 taza de cacao amargo",
@@ -307,10 +307,10 @@ const recipes = [
         "Enmantecar un molde y colocar la preparación. Llevar al horno a 180º durante unos 20 minutos.",
       ],
     ],
-    recipeImg: "../../public/Recetas/brownie.png",
+    recipeImg: "/public/Recetas/brownie.png",
     recipeVideo:
       "https://www.youtube.com/embed/OqWukgiXIpg?si=lsswEVNogWTpBjer",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Prepara un irresistible Brownie sin azúcar, con una base de manteca y cacao amargo para obtener un sabor intenso y delicioso. Añade nueces para un toque crujiente y disfruta de este postre sin remordimientos. ¡Una opción perfecta para satisfacer tu antojo de chocolate!",
     categories: ["postre", "dulce"],
@@ -339,16 +339,16 @@ const recipes = [
         "Cuando estén todas las galletas listas llevarlas a horno precalentado y cocinar por 10 minutos o hasta dorar.",
       ],
     ],
-    recipeImg: "../../public/Recetas/galletas-de-avena-y-banana.jpg",
+    recipeImg: "/public/Recetas/galletas-de-avena-y-banana.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/-CMdJ4-6KvY?si=JBMQGZAhORssJAic",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Prepara unas saludables y deliciosas Galletitas de Avena y Banana, combinando avena, puré de banana, miel y un toque de aceite para obtener una textura suave y un sabor naturalmente dulce. Perfectas para un snack nutritivo en cualquier momento del día.",
     categories: ["postre", "dulce", "saludable"],
   },
   {
-    name: "Vitel Toné",
+    name: "vitel toné",
     ingredients: [
       "1 peceto de 1,5kg. aprox.",
       "2 vasos de vino blanco",
@@ -385,16 +385,16 @@ const recipes = [
         "Colocar más alcaparras por arriba.",
       ],
     ],
-    recipeImg: "../../public/Recetas/vitel-tone.jpg",
+    recipeImg: "/public/Recetas/vitel-tone.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/NgvYkWzcT6w?si=qHNrPZbn1sG3iVaV",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Prepara un exquisito Vitel Toné, con peceto marinado en vino blanco y cocido con caldo de carne. La salsa cremosa de atún, anchoas, mayonesa y alcaparras complementa perfectamente la carne, creando un plato irresistible y lleno de sabor, ideal para cualquier celebración especial.",
     categories: ["salado", "plato principal"],
   },
   {
-    name: "Sopa crema de zapallo y queso",
+    name: "sopa crema de zapallo y queso",
     ingredients: [
       "2 trozos de zapallo hermosísimos",
       "1 cebolla",
@@ -425,10 +425,10 @@ const recipes = [
         "Verter la crema de zapallo bien caliente sobre el queso. Es fundamental que esté bien caliente, ya que esto es lo que hará que se derrita el queso. ",
       ],
     ],
-    recipeImg: "../../public/Recetas/crema-de-zapallo.png",
+    recipeImg: "/public/Recetas/crema-de-zapallo.png",
     recipeVideo:
       "https://www.youtube.com/embed/NEuLgdudHIE?si=YRaFem3oq602z-nK",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Disfruta de una reconfortante Sopa Crema de Zapallo y Queso, con zapallo cocido, cebolla y ajo rehogados en aceite de oliva, mezclados con un buen trozo de queso mantecoso derretido. Una adición opcional de crema de leche completa este plato reconfortante, ideal para calentar el cuerpo en días fríos.",
     categories: ["salado", "plato principal", "entrada"],
@@ -478,17 +478,17 @@ const recipes = [
         "Serviremos el pato en una fuente con los discos de naranja alrededor y un poquito de salsa por encima. El resto de la salsa la serviremos en una salsera aparte.",
       ],
     ],
-    recipeImg: "../../public/Recetas/pato-a-la-naranja.jpg",
+    recipeImg: "/public/Recetas/pato-a-la-naranja.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/b8KHFjFumqI?si=My6l1B1lVKenRQOv",
-    recipeLink: "../pages/templates/receta",
+    recipeLink: "/pages/templates/receta",
     recepiDescription:
       "Deléitate con un exquisito Pato a la Naranja, donde la carne tierna se marina con brandy y se cocina con jugo de naranja fresca. Con un toque de caramelo de azúcar y vinagre, este plato se eleva a la perfección. ¡Una opción ideal para una cena gourmet o una ocasión especial!",
     categories: ["salado", "plato principal", "entrada"],
   },
 ];
 function searchRecepiName() {
-  const recipeName = localStorage.getItem("name");
+  const recipeName = localStorage.getItem("name").toLocaleLowerCase();
   for (const recipe of recipes) {
     if (recipe.name === recipeName) {
       return recipe;
@@ -528,13 +528,11 @@ export function recipeSteps() {
 }
 
 export function recepiDescription() {
-  const storedRecipe = searchRecepiName();
-  if (storedRecipe !== null) {
-    const recepiArray = recipes;
-    const recepiDescription = storedRecipe.recepiDescription;
+  const recepiArray = recipes;
+  for (const recipe of recipes) {
+    const recepiDescription = recipe.recepiDescription;
     return { recepiDescription, recepiArray };
   }
-  return null;
 }
 
 export function categories() {

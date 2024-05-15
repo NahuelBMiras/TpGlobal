@@ -3,7 +3,7 @@
 ---
 
 <script>
-  import { recepiDescription } from "../scripts/recipe.mjs";
+  import { recepiDescription } from "../../public/recipe.mjs";
 
   const recepiContainer = document.querySelector(".recepi-container");
   const recipeDescriptionElement = recepiDescription().recepiArray;
@@ -42,6 +42,12 @@
     recipeTextContainer.appendChild(recipeText);
     recipeText.innerHTML = recipeDescriptionElement[i].recepiDescription;
     i++;
+  });
+  const a = document.querySelectorAll("a");
+
+  console.log(a[0]);
+  a[0].addEventListener("click", () => {
+    localStorage.setItem("name", "pizza a ka piedra");
   });
 </script>
 

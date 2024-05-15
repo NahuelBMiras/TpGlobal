@@ -1,27 +1,13 @@
 ---
-import HeaderAndFooter from "../../layouts/HeaderAndFooter.astro";
-import RecipeCard from "../../components/RecipeCard.astro";
-import Recepi from "../../components/Recepi.astro";
-import RecepiSteps from "../../components/RecepiSteps.astro";
-import RecepiVideo from "../../components/RecepiVideo.astro";
-import Subtitle from "../../components/Subtitle.astro";
+import HeaderAndFooter from "../layouts/HeaderAndFooter.astro";
+import RecipeCard from "../components/RecipeCard.astro";
+import Recepi from "../components/Recepi.astro";
+import RecepiSteps from "../components/RecepiSteps.astro";
+import RecepiVideo from "../components/RecepiVideo.astro";
+import Subtitle from "../components/Subtitle.astro";
 ---
 
-<script src="/src/scripts/recipe"></script>
-<script>
-  import {
-    recipeInfo,
-    recipeVideo,
-    recipeSteps,
-    recepiDescription,
-    categories,
-  } from "../../scripts/recipe.mjs";
-  recipeInfo();
-  recipeVideo();
-  recipeSteps();
-  recepiDescription();
-  categories();
-</script>
+<script></script>
 <HeaderAndFooter title="Receta">
   <main>
     <Recepi />
@@ -99,5 +85,3 @@ import Subtitle from "../../components/Subtitle.astro";
     }
   }
 </style>
-
-<script></script>

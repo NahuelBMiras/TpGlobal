@@ -2,16 +2,14 @@
 import HeaderAndFooter from "../layouts/HeaderAndFooter.astro";
 import RecommendedRecipes from "../components/RecommendedRecipes.astro";
 import Subtitle from "../components/Subtitle.astro";
-import RecipeCard from "../components/Recipes.astro";
+import RecipeCard from "../components/RecipeCard.astro";
 ---
 
-<script src="/src/scripts/recipe"></script>
 <HeaderAndFooter title="Mi Rincon De Recetas">
   <main>
     <RecommendedRecipes subtitle="Recetas Recomendadas" />
-    <a href="templates/receta">receta</a>
-    <a href="templates/recetas">recetas</a>
-    <a href="templates/intento">intento</a>
+    <a href="/receta">receta</a>
+    <a href="/recetas">recetas</a>
     <article class="find_recipe">
       <Subtitle>Encuentra Tu Receta Ideal</Subtitle>
       <section class="container-form-find_recipe">
@@ -67,25 +65,12 @@ import RecipeCard from "../components/Recipes.astro";
     </article>
     <article>
       <section class="popular_recipes">
-        <picture class="carousel_container"> </picture>
+        <picture class="carousel_container"></picture>
       </section>
     </article>
   </main>
 </HeaderAndFooter>
-<script>
-  import {
-    recipeInfo,
-    recipeVideo,
-    recipeSteps,
-    recepiDescription,
-    categories,
-  } from "../scripts/recipe.mjs";
-  recipeInfo();
-  recipeVideo();
-  recipeSteps();
-  recepiDescription();
-  categories();
-</script>
+
 <style>
   * {
     margin: 0;
