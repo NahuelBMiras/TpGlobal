@@ -50,7 +50,7 @@ const recipes = [
         "Coloca la pizza en un nivel superior para que se termine de cocinar y se derrita el queso.",
       ],
     ],
-    recipeImg: "/public/Recetas/pizza.jpg",
+    recipeImg: "/Recetas/pizza.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/G3LmiPpjMgY?si=4pcii-ldTIPEHMZa",
     recipeLink: "/pages/templates/receta",
@@ -96,7 +96,7 @@ const recipes = [
         "Retira las milanesas del aceite y colócalas sobre papel absorbente para eliminar el exceso de grasa.",
       ],
     ],
-    recipeImg: "/public/Recetas/Milanesas.png",
+    recipeImg: "/Recetas/Milanesas.png",
     recipeVideo:
       "https://www.youtube.com/embed/Wl60CWse58U?si=b0yiL58sShyQBj-T",
     recipeLink: "/pages/templates/receta",
@@ -143,7 +143,7 @@ const recipes = [
         "Cuando hayan duplicado su tamaño se deben llevar a un horno precalentado a 180 grados por 25 minutos aproximadamente. El tiempo de horneado puede variar según el horno, es importante verificar la cocción antes de sacarlos del horno. Puedes hacer insertando un palillo en el centro del pan. Si sale limpio y seco, significa que el pan está listo. Si el palillo sale con migas húmedas o masa pegajosa, es necesario hornearlo por más tiempo.",
       ],
     ],
-    recipeImg: "/public/Recetas/Pan.jpg",
+    recipeImg: "/Recetas/Pan.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/TisLykAy050?si=da3BXNqJnm0Odd2w",
     recipeLink: "/pages/templates/receta",
@@ -194,7 +194,7 @@ const recipes = [
         "Sirve el risotto caliente, espolvoreado con un poco más de queso rallado si lo prefieres, y acompáñalo con un buen vino blanco.",
       ],
     ],
-    recipeImg: "/public/Recetas/risoto.jpg",
+    recipeImg: "/Recetas/risoto.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/lNpqHQvrv5s?si=J0TP0tvpWZwDx5Ig",
     recipeLink: "/pages/templates/receta",
@@ -238,7 +238,7 @@ const recipes = [
         "Pasado el tiempo, desmoldar y decorar por arriba con galletas.",
       ],
     ],
-    recipeImg: "/public/Recetas/torta-oreo.jpg",
+    recipeImg: "/Recetas/torta-oreo.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/lnaPrAcsMgY?si=a3Q3QY6uJxFmKcjr",
     recipeLink: "/pages/templates/receta",
@@ -271,7 +271,7 @@ const recipes = [
         "Llevar a horno moderado 180° por más o menos 40 o 45 minutos (siempre depende mucho de cada horno). Chequear su cocción con un palito de madera, al pinchar el budín de vainilla el palito debe salir seco.",
       ],
     ],
-    recipeImg: "/public/Recetas/budin-de-vainilla.jpg",
+    recipeImg: "/Recetas/budin-de-vainilla.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/kbTzawpD29w?si=njLGY9U4p8AR3dGb",
     recipeLink: "/pages/templates/receta",
@@ -307,7 +307,7 @@ const recipes = [
         "Enmantecar un molde y colocar la preparación. Llevar al horno a 180º durante unos 20 minutos.",
       ],
     ],
-    recipeImg: "/public/Recetas/brownie.png",
+    recipeImg: "/Recetas/brownie.png",
     recipeVideo:
       "https://www.youtube.com/embed/OqWukgiXIpg?si=lsswEVNogWTpBjer",
     recipeLink: "/pages/templates/receta",
@@ -339,7 +339,7 @@ const recipes = [
         "Cuando estén todas las galletas listas llevarlas a horno precalentado y cocinar por 10 minutos o hasta dorar.",
       ],
     ],
-    recipeImg: "/public/Recetas/galletas-de-avena-y-banana.jpg",
+    recipeImg: "/Recetas/galletas-de-avena-y-banana.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/-CMdJ4-6KvY?si=JBMQGZAhORssJAic",
     recipeLink: "/pages/templates/receta",
@@ -385,7 +385,7 @@ const recipes = [
         "Colocar más alcaparras por arriba.",
       ],
     ],
-    recipeImg: "/public/Recetas/vitel-tone.jpg",
+    recipeImg: "/Recetas/vitel-tone.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/NgvYkWzcT6w?si=qHNrPZbn1sG3iVaV",
     recipeLink: "/pages/templates/receta",
@@ -425,7 +425,7 @@ const recipes = [
         "Verter la crema de zapallo bien caliente sobre el queso. Es fundamental que esté bien caliente, ya que esto es lo que hará que se derrita el queso. ",
       ],
     ],
-    recipeImg: "/public/Recetas/crema-de-zapallo.png",
+    recipeImg: "/Recetas/crema-de-zapallo.png",
     recipeVideo:
       "https://www.youtube.com/embed/NEuLgdudHIE?si=YRaFem3oq602z-nK",
     recipeLink: "/pages/templates/receta",
@@ -478,7 +478,7 @@ const recipes = [
         "Serviremos el pato en una fuente con los discos de naranja alrededor y un poquito de salsa por encima. El resto de la salsa la serviremos en una salsera aparte.",
       ],
     ],
-    recipeImg: "/public/Recetas/pato-a-la-naranja.jpg",
+    recipeImg: "/Recetas/pato-a-la-naranja.jpg",
     recipeVideo:
       "https://www.youtube.com/embed/b8KHFjFumqI?si=My6l1B1lVKenRQOv",
     recipeLink: "/pages/templates/receta",
