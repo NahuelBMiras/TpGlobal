@@ -3,10 +3,12 @@ import HeaderAndFooter from "../layouts/HeaderAndFooter.astro";
 import RecommendedRecipes from "../components/RecommendedRecipes.astro";
 import Subtitle from "../components/Subtitle.astro";
 import RecipeCard from "../components/RecipeCard.astro";
+import Carousel from "../components/Carousel.astro";
 ---
 
 <HeaderAndFooter title="Mi Rincon De Recetas" index="/index.astro">
   <main>
+<<<<<<< HEAD
     <RecommendedRecipes subtitle="Recetas Recomendadas" />
     <a href="/login">receta</a>
     <a href="/recetas">recetas</a>
@@ -14,50 +16,177 @@ import RecipeCard from "../components/RecipeCard.astro";
       <Subtitle>Encuentra Tu Receta Ideal</Subtitle>
       <section class="container-form-find_recipe">
         <form action="" class="form-find_recipe">
+=======
+    <div class="images_container">
+      <img class="img1" src="./img/comida1.jpg" alt="" />
+      <div class="vertical_images">
+        <img class="img2" src="./img/comida2.jpg" alt="" />
+        <img class="img3" src="./img/comida3.jpg" alt="" />
+      </div>
+    </div>
+    <!--Fin de Imagenes Banner -->
+    <h2>Encuentra tu receta</h2>
+    <!--Inicio de FORMS -->
+    <div class="form_container">
+      <form action="" class="form_find_recipe">
+        <fieldset>
+          <legend>
+            <h3>Ingredientes:</h3>
+          </legend>
+>>>>>>> 537e93b58378428bc84067e9942d9f74e58206bb
           <label class="label_ingredient">
             <select>
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
+              <option value="opcion0">Seleccione</option>
+              <option value="opcion1">Verduras</option>
+              <option value="opcion2">Frutas</option>
+              <option value="opcion3">Legumbres</option>
             </select>
           </label>
           <br />
           <label class="label_ingredient">
             <select>
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
+              <option value="opcion0">Seleccione</option>
+              <option value="opcion1">Aceite</option>
+              <option value="opcion1">Leche</option>
+              <option value="opcion3">Manteca</option>
             </select>
           </label>
           <br />
           <label class="label_ingredient">
             <select>
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
+              <option value="opcion0">Seleccione</option>
+              <option value="opcion1">Huevos</option>
+              <option value="opcion2">Condimentos</option>
+              <option value="opcion3">Hongos</option>
             </select>
           </label>
           <br />
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <h3>Dificultad:</h3>
+          </legend>
           <label class="label_difficulty">
             <select>
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
+              <option value="opcion0">Seleccione</option>
+              <option value="opcion1">Facil</option>
+              <option value="opcion2">Intermedio</option>
+              <option value="opcion3">Dificil</option>
             </select>
           </label>
           <br />
+        </fieldset>
+        <fieldset>
+          <legend>
+            <h3>Sabor:</h3>
+          </legend>
           <label class="label_taste">
             <select>
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
+              <option value="opcion0">Seleccione</option>
+              <option value="opcion1">Salado</option>
+              <option value="opcion2">Dulce</option>
+              <option value="opcion3">Agrio</option>
+              <option value="opcion3">Agridulce</option>
+              <option value="opcion3">Amargo</option>
             </select>
           </label>
           <br />
+<<<<<<< HEAD
           <button>Buscar Receta</button>
         </form>
       </section>
     </article>
+=======
+        </fieldset>
+        <fieldset>
+          <legend>
+            <h3>Método de Cocción:</h3>
+          </legend>
+          <label class="label_cook">
+            <select>
+              <option value="opcion0">Seleccione</option>
+              <option value="opcion1">Horno</option>
+              <option value="opcion2">Microondas</option>
+              <option value="opcion3">Olla a presión</option>
+            </select>
+          </label>
+          <br />
+        </fieldset>
+        <fieldset>
+          <legend>
+            <h3>Tiempo de Cocción:</h3>
+          </legend>
+          <label class="label_ingredient">
+            <select>
+              <option value="opcion0">Seleccione</option>
+              <option value="opcion1">Menos de 1 hora</option>
+              <option value="opcion2">Mas de 2 horas</option>
+              <option value="opcion3">Mas de 3 horas</option>
+            </select>
+          </label>
+          <br />
+        </fieldset>
+
+        <button>Buscar Receta</button>
+      </form>
+    </div>
+    <!--Fin del FORMS -->
+
+    <h2>Recetas de la comunidad</h2>
+    <!--Inicio del Carousel -->
+    <Carousel />
+    <!--Fin del Carousel -->
+
+    <!-- Inicio Receta -->
+    <h2>Recetas Destacadas</h2>
+
+    <div class="recipes">
+      <div class="recipe">
+        <div class="recipe-img">
+          <img src="./img/receta9.jpg" alt="Recipe 1" />
+          <div class="recipe-caption">
+            <h3>Pato a la naranja</h3>
+            <p>
+              El pato a la naranja es un plato clásico francés con pechuga de
+              pato glaseada en salsa de naranja. Es crujiente por fuera, jugoso
+              por dentro y se sirve con guarniciones como puré o vegetales al
+              vapor. Es una elección refinada para eventos especiales.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="recipe">
+        <div class="recipe-img">
+          <img src="./img/receta2.jpg" alt="Recipe 2" />
+          <div class="recipe-caption">
+            <h3>Tarta de verdura</h3>
+            <p>
+              La tarta de vegetales es una delicia versátil hecha con una base
+              de masa y rellena de una mezcla de vegetales frescos y queso. Se
+              hornea hasta obtener una textura dorada y crujiente. Es una opción
+              sabrosa y saludable para cualquier ocasión.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="recipe">
+        <div class="recipe-img">
+          <img src="./img/receta3.jpg" alt="Recipe 3" />
+          <div class="recipe-caption">
+            <h3>Papa rellena</h3>
+            <p>
+              La papa rellena es un plato latinoamericano hecho con papas
+              cocidas y rellenas de una mezcla de carne, cebolla y especias. Se
+              empanizan y fríen hasta dorar. Es un bocado crujiente y sabroso,
+              perfecto como aperitivo o plato principal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin de Receta -->
+>>>>>>> 537e93b58378428bc84067e9942d9f74e58206bb
   </main>
   <article>
     <section class="popular_recipes">
@@ -67,20 +196,230 @@ import RecipeCard from "../components/RecipeCard.astro";
 </HeaderAndFooter>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   main {
     grid-column: span 4;
-
-    width: 100%;
-    background-color: rgb(249, 248, 247);
-
+  }
+  /* Inicio Imagenes banner */
+  .images_container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1.5fr;
-    place-content: center;
+    grid-template-columns: auto 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 5%;
+    height: 17%;
+  }
+
+  .images_container img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+
+  .images_container img:first-child {
+    grid-column: 1 / span 2;
+    height: 40%;
+  }
+  .images_container .vertical_images img {
+    width: 100%;
+    height: 19.85%;
+  }
+  /* Fin imagenes banner */
+
+  h2 {
+    text-align: center;
+    background-color: rgb(249, 248, 247);
+    margin-bottom: 1.5%;
+    
+  }
+  h3 {
+    margin-top: 1%;
+    margin-bottom: 3%;
+  }
+
+  /* Inicio del formulario */
+  .form_container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    background-color: rgb(249, 248, 247);
+    width: 90%;
+    padding-top: 5vh;
+    margin: 0 auto;
+  }
+  fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  legend {
+    font-weight: bold;
+    margin-bottom: 1%;
+  }
+
+  .form_find_recipe {
+    width: 25%;
+    text-align: center;
+    background-color: white;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estilos para las listas desplegables */
+  .form_find_recipe select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 2em;
+    background-color: white;
+    color: #333;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .form_find_recipe select:hover {
+    border-color: rgb(20, 129, 113);
+    color: rgb(20, 129, 113);
+  }
+
+  .form_find_recipe select:focus {
+    outline: none;
+    border-color: rgb(20, 129, 113);
+    box-shadow: 0 0 8px rgba(20, 129, 113, 0.5);
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+    width: 10em;
+    padding: 0.5em;
+    border: 2px solid black;
+    border-radius: 2em;
+    box-shadow: 2px 2px 4px rgb(71, 71, 71);
+    transition: 0.2s ease;
+  }
+
+  button:hover {
+    border: 2px solid rgb(20, 129, 113);
+    color: rgb(20, 129, 113);
+    box-shadow: 4px 4px 8px black;
+    text-shadow: 2px 2px 4px rgb(121, 121, 121);
+  }
+
+  button:active {
+    transition: 0.1s ease;
+    background-color: rgb(10, 64, 57);
+    border-color: rgb(10, 64, 57);
+    color: white;
+    box-shadow: none;
+    text-shadow: none;
+  }
+  /* Fin formulario */
+
+  /* Inicio Receta */
+  .recipes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 3em;
+  }
+
+  .recipe {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+  /* Modificar despues*/
+  .recipe-img {
+    position: relative;
+    align-items: center;
+  }
+
+  .recipe img {
+    width: 100%;
+    height: 500px;
+    display: block;
+  }
+
+  .recipe-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: #fff;
+    box-sizing: border-box;
+  }
+
+  .recipe-caption h3,
+  .recipe-caption p {
+    margin: 0;
+    text-align: center;
+  }
+  /* Fin Receta */
+
+  /* Pantallas pequeñas*/
+  @media only screen and (max-width: 768px) {
+    .form_container {
+      margin-top: 10%;
+    }
+    .images_container {
+      width: 100%;
+      height: 5%;
+      margin-bottom: 5%;
+    }
+
+    .images_container .vertical_images img {
+      width: 100%;
+      height: 19.23%;
+    }
+    .carousel-container {
+      height: 10%;
+      width: 100%;
+    }
+    .boton-izquierda,
+    .boton-derecha {
+      position: absolute;
+      width: 20%;
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+
+    .recipes {
+      flex-direction: column;
+      align-items: center;
+    }
+    .recipe {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+
+    .community_recipes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .community_recipe {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+    .recipe-img {
+      height: 25%;
+      width: 100%;
+    }
+    .form_container {
+      padding: 20px;
+      margin-bottom: 25%;
+    }
+    .form_find_recipe {
+      width: 90%;
+    }
   }
 </style>
