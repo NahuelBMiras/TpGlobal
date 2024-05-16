@@ -10,6 +10,7 @@ const recipes = [
       "6 cucharadas manteca derretida",
       "Cantidad necesaria semolin",
     ],
+    id: "pizzaalapiedra",
     recipeInstructions:
       "Para activar la levadura, desmenuza la levadura en un bol y añade el azúcar, mezclando bien. Agrega 200 cc de agua tibia y revuelve hasta obtener una mezcla homogénea. Incorpora 3 cucharadas de harina y mezcla nuevamente. Cubre el recipiente con film transparente y un paño, y deja reposar durante 20 minutos para activar la levadura. Para preparar la masa, forma una corona con la harina y coloca la sal alrededor, evitando el centro. En el centro, agrega la levadura activada. Mezcla todo y luego añade agua tibia poco a poco mientras amasas. Agrega la manteca derretida y sigue amasando hasta que la masa tome consistencia. Deja reposar la masa en un bowl tapado con film transparente y un paño durante 30 minutos en un lugar cálido para que fermente adecuadamente. Después del reposo inicial, desgasifica la masa y déjala reposar durante 5 minutos más. Enciende el horno y coloca una fuente invertida en la base del mismo para la cocción a la piedra. Luego, divide la masa en seis bollos. Espolvorea semolín sobre la mesada y estira la masa, dándole la medida aproximada de la bandeja del horno para evitar que se pegue. Para la cocción de las pizzas, una vez estiradas las masas y con el horno caliente, coloca la masa de la pizza sobre la fuente caliente en el horno. Cocina durante aproximadamente 5 minutos. El tiempo puede variar según el horno. Finalmente, retira solo la pizza con la ayuda de una pala. Coloca la salsa y el queso sobre la pizza. Vuelve a colocar la pizza en un nivel superior del horno para que se termine de cocinar y se derrita el queso.",
     recipeSteps: [
@@ -60,6 +61,7 @@ const recipes = [
   },
   {
     name: "milanesas de soja",
+    id: "milanesasdesoja",
     ingredients: [
       "1 taza de proteína texturizada de soja",
       "1 taza de pan rallado",
@@ -106,6 +108,7 @@ const recipes = [
   },
   {
     name: "pan de campo",
+    id: "pandecampo",
     ingredients: [
       "10 gramos de levadura seca",
       "500 gramos de harina común",
@@ -153,6 +156,7 @@ const recipes = [
   },
   {
     name: "risotto",
+    id: "risotto",
     ingredients: [
       "150 g (crudo) arroz yamaní integral",
       "3/4 copa vino",
@@ -203,7 +207,8 @@ const recipes = [
     categories: ["salado", "plato principal"],
   },
   {
-    name: "Torta Oreo",
+    name: "torta oreo",
+    id: "tortaoreo",
     ingredients: [
       "800 gr de queso crema.",
       "400 gr de crema de leche.",
@@ -248,6 +253,7 @@ const recipes = [
   },
   {
     name: "budín de vainilla",
+    id: "budíndevainilla",
     ingredients: [
       " 2 tazas de harina leudante.",
       "2 huevos.",
@@ -281,6 +287,7 @@ const recipes = [
   },
   {
     name: "brownie",
+    id: "brownie",
     ingredients: [
       "100g. de manteca",
       "1 taza de cacao amargo",
@@ -316,7 +323,8 @@ const recipes = [
     categories: ["postre", "dulce"],
   },
   {
-    name: "Galletitas de avena y banana",
+    name: "galletitas de avena y banana",
+    id: "galletitasdeavenaybanana",
     ingredients: [
       "200 gr de avena.",
       "3 bananas.",
@@ -349,6 +357,7 @@ const recipes = [
   },
   {
     name: "vitel toné",
+    id: "viteltoné",
     ingredients: [
       "1 peceto de 1,5kg. aprox.",
       "2 vasos de vino blanco",
@@ -395,6 +404,7 @@ const recipes = [
   },
   {
     name: "sopa crema de zapallo y queso",
+    id: "sopacremadezapalloyqueso",
     ingredients: [
       "2 trozos de zapallo hermosísimos",
       "1 cebolla",
@@ -435,6 +445,7 @@ const recipes = [
   },
   {
     name: "pato a la naranja",
+    id: "patoalanaranja",
     ingredients: [
       "1 Pato entero de 1,700 gramos",
       "4 Naranjas",
@@ -487,10 +498,11 @@ const recipes = [
     categories: ["salado", "plato principal", "entrada"],
   },
 ];
-function searchRecipeName() {
+
+function searchRecipeId() {
   const recipeName = localStorage.getItem("name").toLocaleLowerCase();
   for (const recipe of recipes) {
-    if (recipe.name === recipeName) {
+    if (recipe.id === recipeName) {
       return recipe;
     }
   }
@@ -498,7 +510,7 @@ function searchRecipeName() {
 }
 
 export function recipeInfo() {
-  const storedRecipe = searchRecipeName();
+  const storedRecipe = searchRecipeId();
   if (storedRecipe !== null) {
     const ingredients = storedRecipe.ingredients;
     const recipeImg = storedRecipe.recipeImg;
@@ -510,7 +522,7 @@ export function recipeInfo() {
 }
 
 export function recipeVideo() {
-  const storedRecipe = searchRecipeName();
+  const storedRecipe = searchRecipeId();
   if (storedRecipe !== null) {
     const recipeVideo = storedRecipe.recipeVideo;
     return { recipeVideo };
@@ -519,7 +531,7 @@ export function recipeVideo() {
 }
 
 export function recipeSteps() {
-  const storedRecipe = searchRecipeName();
+  const storedRecipe = searchRecipeId();
   if (storedRecipe !== null) {
     const recipeSteps = storedRecipe.recipeSteps;
     return { recipeSteps };
@@ -536,7 +548,7 @@ export function recipeDescription() {
 }
 
 export function categories() {
-  const storedRecipe = searchRecipeName();
+  const storedRecipe = searchRecipeId();
   const recipeArray = recipes;
   const recipeStoredCategories = storedRecipe.categories;
   const matchingRecipesAndStoredRecipe = [];

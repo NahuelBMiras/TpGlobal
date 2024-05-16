@@ -15,6 +15,7 @@
 
     const recipeLink = document.createElement("a");
     recipeLink.classList.add("recipe-link");
+    recipeLink.id = recipe.id;
     recipeLink.href = "receta";
     recipeElement.appendChild(recipeLink);
 
@@ -49,6 +50,16 @@
     createRecipeElement(recipe);
     i++;
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const a = document.querySelectorAll("a");
+
+    a.forEach((link) => {
+      link.addEventListener("click", () => {
+        localStorage.setItem("name", link.id);
+      });
+    });
+  });
 </script>
 
 <article class="recipe-container"></article>

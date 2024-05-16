@@ -15,6 +15,7 @@
 
     const recipeLink = document.createElement("a");
     recipeLink.classList.add("recipe-link");
+    recipeLink.id = recipeDescriptionElement[i].id;
     recipeLink.href = "receta";
     recipe.appendChild(recipeLink);
 
@@ -43,11 +44,15 @@
     recipeText.innerHTML = recipeDescriptionElement[i].recipeDescription;
     i++;
   });
-  const a = document.querySelectorAll("a");
 
-  console.log(a[0]);
-  a[0].addEventListener("click", () => {
-    localStorage.setItem("name", "pizza a ka piedra");
+  document.addEventListener("DOMContentLoaded", () => {
+    const a = document.querySelectorAll("a");
+
+    a.forEach((link) => {
+      link.addEventListener("click", () => {
+        localStorage.setItem("name", link.id);
+      });
+    });
   });
 </script>
 
