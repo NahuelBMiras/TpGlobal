@@ -3,28 +3,27 @@
 ---
 
 <script>
-  import { categories } from "../../public/recipe.mjs";
+  import { categories } from "../../public/recipe-functions.mjs";
 
-  const recepiContainer = document.querySelector(".recepi-container");
+  const recipeContainer = document.querySelector(".recipe-container");
   const matchingRecipes = categories().matchingRecipes;
-  const recipeArray = categories().recepiArray;
   let i = 0;
-  function createRecepiElement(recepi) {
-    const recipe = document.createElement("section");
-    recipe.classList.add("recipe");
-    recepiContainer.appendChild(recipe);
+  function createRecipeElement(recipe) {
+    const recipeElement = document.createElement("section");
+    recipeElement.classList.add("recipe");
+    recipeContainer.appendChild(recipeElement);
 
     const recipeLink = document.createElement("a");
     recipeLink.classList.add("recipe-link");
     recipeLink.href = "receta";
-    recipe.appendChild(recipeLink);
+    recipeElement.appendChild(recipeLink);
 
     const recipeImgContainer = document.createElement("div");
     recipeImgContainer.classList.add("recipe-img-container");
     recipeLink.appendChild(recipeImgContainer);
 
     const recipeImg = document.createElement("img");
-    const recipeImgPath = recepi.recipeImg;
+    const recipeImgPath = recipe.recipeImg;
     recipeImg.src = recipeImgPath;
     recipeImgContainer.appendChild(recipeImg);
 
@@ -35,26 +34,26 @@
     const recipeName = document.createElement("h3");
     recipeName.classList.add("text");
     recipeTextContainer.appendChild(recipeName);
-    recipeName.innerHTML = recepi.name.toUpperCase();
+    recipeName.innerHTML = recipe.name.toUpperCase();
 
     const recipeText = document.createElement("p");
     recipeText.classList.add("text");
     recipeText.classList.add("text-description");
     recipeTextContainer.appendChild(recipeText);
-    recipeText.innerHTML = recepi.recepiDescription;
+    recipeText.innerHTML = recipe.recipeDescription;
   }
-  for (const recepi of matchingRecipes) {
+  for (const recipe of matchingRecipes) {
     if (i === matchingRecipes.length || i === 3) {
       break;
     }
-    createRecepiElement(recepi);
+    createRecipeElement(recipe);
     i++;
   }
 </script>
 
-<article class="recepi-container"></article>
+<article class="recipe-container"></article>
 <style>
-  .recepi-container {
+  .recipe-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +118,7 @@
     }
   }
 
-  .recepi-container {
+  .recipe-container {
     .recipe {
       &:hover {
         .recipe-img-container {
@@ -134,7 +133,7 @@
   }
 
   @media (width > 822px) {
-    .recepi-container {
+    .recipe-container {
       flex-direction: row;
       .recipe {
         width: 45%;
@@ -149,7 +148,7 @@
   }
 
   @media (width > 1200px) {
-    .recepi-container {
+    .recipe-container {
       flex-direction: row;
       .recipe {
         width: 45%;
@@ -165,7 +164,7 @@
   }
 
   @media (width > 1300px) {
-    .recepi-container {
+    .recipe-container {
       flex-direction: row;
       .recipe {
         width: 30%;
@@ -180,7 +179,7 @@
   }
 
   @media (width > 1416px) {
-    .recepi-container {
+    .recipe-container {
       .recipe {
         width: 25%;
         .recipe-img-container {
@@ -194,7 +193,7 @@
   }
 
   @media (width > 1700px) {
-    .recepi-container {
+    .recipe-container {
       .recipe {
         width: 21%;
         .recipe-img-container {
@@ -208,7 +207,7 @@
   }
 
   @media (width > 1900px) {
-    .recepi-container {
+    .recipe-container {
       .recipe {
         width: 21%;
         .recipe-img-container {

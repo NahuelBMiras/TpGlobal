@@ -3,15 +3,15 @@
 ---
 
 <script>
-  import { recepiDescription } from "../../public/recipe.mjs";
+  import { recipeDescription } from "../../public/recipe-functions.mjs";
 
-  const recepiContainer = document.querySelector(".recepi-container");
-  const recipeDescriptionElement = recepiDescription().recepiArray;
+  const recipeContainer = document.querySelector(".recipe-container");
+  const recipeDescriptionElement = recipeDescription().recipeArray;
   let i = 0;
   recipeDescriptionElement.forEach(() => {
     const recipe = document.createElement("section");
     recipe.classList.add("recipe");
-    recepiContainer.appendChild(recipe);
+    recipeContainer.appendChild(recipe);
 
     const recipeLink = document.createElement("a");
     recipeLink.classList.add("recipe-link");
@@ -40,7 +40,7 @@
     recipeText.classList.add("text");
     recipeText.classList.add("text-description");
     recipeTextContainer.appendChild(recipeText);
-    recipeText.innerHTML = recipeDescriptionElement[i].recepiDescription;
+    recipeText.innerHTML = recipeDescriptionElement[i].recipeDescription;
     i++;
   });
   const a = document.querySelectorAll("a");
@@ -51,9 +51,9 @@
   });
 </script>
 
-<article class="recepi-container"></article>
+<article class="recipe-container"></article>
 <style>
-  .recepi-container {
+  .recipe-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +118,7 @@
     }
   }
 
-  .recepi-container {
+  .recipe-container {
     .recipe {
       &:hover {
         .recipe-img-container {
@@ -133,7 +133,7 @@
   }
 
   @media (width > 822px) {
-    .recepi-container {
+    .recipe-container {
       flex-direction: row;
       .recipe {
         width: 45%;
@@ -148,7 +148,7 @@
   }
 
   @media (width > 1300px) {
-    .recepi-container {
+    .recipe-container {
       flex-direction: row;
       .recipe {
         width: 30%;
@@ -163,7 +163,7 @@
   }
 
   @media (width > 1416px) {
-    .recepi-container {
+    .recipe-container {
       .recipe {
         width: 25%;
         .recipe-img-container {
@@ -177,7 +177,7 @@
   }
 
   @media (width > 1700px) {
-    .recepi-container {
+    .recipe-container {
       .recipe {
         width: 21%;
         .recipe-img-container {
@@ -191,7 +191,7 @@
   }
 
   @media (width > 1900px) {
-    .recepi-container {
+    .recipe-container {
       .recipe {
         width: 21%;
         .recipe-img-container {

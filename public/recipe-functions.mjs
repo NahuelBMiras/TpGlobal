@@ -54,7 +54,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/G3LmiPpjMgY?si=4pcii-ldTIPEHMZa",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Descubre cómo preparar una deliciosa pizza casera con masa crujiente y sabrosa utilizando harina, levadura, sal, azúcar, agua y manteca. ¡Una receta clásica que nunca falla!",
     categories: ["salado", "plato principal"],
   },
@@ -100,7 +100,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/Wl60CWse58U?si=b0yiL58sShyQBj-T",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Prepara unas irresistibles Milanesas de Soja, una opción vegetariana llena de sabor con proteína texturizada de soja, pan rallado, huevo (o sustituto), ajo, pimentón, orégano y especias. ¡Una alternativa sabrosa para cualquier ocasión!",
     categories: ["vegetariano", "plato principal"],
   },
@@ -147,7 +147,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/TisLykAy050?si=da3BXNqJnm0Odd2w",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Disfruta de un auténtico Pan de Campo, con una receta simple que combina levadura seca, harina, sal, grasa y agua tibia. El complemento perfecto para cualquier comida.",
     categories: ["panadería", "acompañamiento"],
   },
@@ -198,7 +198,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/lNpqHQvrv5s?si=J0TP0tvpWZwDx5Ig",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Descubre el exquisito sabor del Risotto con una base de arroz yamaní integral, realzado con champiñones frescos. Esta receta también incluye vino, caldo, vegetales frescos y una deliciosa pasta de ajo. ¡Una experiencia culinaria que no te puedes perder, especialmente por los champiñones que añaden un toque de sabor único!",
     categories: ["salado", "plato principal"],
   },
@@ -242,7 +242,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/lnaPrAcsMgY?si=a3Q3QY6uJxFmKcjr",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Disfruta de una Tentadora Torta Oreo, con una base de galletas trituradas y manteca, rellena con una mezcla cremosa de queso crema, crema de leche y galletas Oreo. Perfectamente equilibrada en sabor y textura, esta delicia es el postre ideal para cualquier ocasión especial. ¡No podrás resistirte a cada bocado!",
     categories: ["postre", "dulce"],
   },
@@ -275,7 +275,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/kbTzawpD29w?si=njLGY9U4p8AR3dGb",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Prepara un irresistible Budín de Vainilla, suave y esponjoso, con una mezcla de harina leudante, huevos, azúcar, aceite y una pizca de esencia de vainilla. Un clásico que deleita en cada bocado, ideal para compartir en cualquier ocasión.",
     categories: ["postre", "dulce"],
   },
@@ -311,7 +311,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/OqWukgiXIpg?si=lsswEVNogWTpBjer",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Prepara un irresistible Brownie sin azúcar, con una base de manteca y cacao amargo para obtener un sabor intenso y delicioso. Añade nueces para un toque crujiente y disfruta de este postre sin remordimientos. ¡Una opción perfecta para satisfacer tu antojo de chocolate!",
     categories: ["postre", "dulce"],
   },
@@ -343,7 +343,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/-CMdJ4-6KvY?si=JBMQGZAhORssJAic",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Prepara unas saludables y deliciosas Galletitas de Avena y Banana, combinando avena, puré de banana, miel y un toque de aceite para obtener una textura suave y un sabor naturalmente dulce. Perfectas para un snack nutritivo en cualquier momento del día.",
     categories: ["postre", "dulce", "saludable"],
   },
@@ -389,7 +389,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/NgvYkWzcT6w?si=qHNrPZbn1sG3iVaV",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Prepara un exquisito Vitel Toné, con peceto marinado en vino blanco y cocido con caldo de carne. La salsa cremosa de atún, anchoas, mayonesa y alcaparras complementa perfectamente la carne, creando un plato irresistible y lleno de sabor, ideal para cualquier celebración especial.",
     categories: ["salado", "plato principal"],
   },
@@ -429,7 +429,7 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/NEuLgdudHIE?si=YRaFem3oq602z-nK",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Disfruta de una reconfortante Sopa Crema de Zapallo y Queso, con zapallo cocido, cebolla y ajo rehogados en aceite de oliva, mezclados con un buen trozo de queso mantecoso derretido. Una adición opcional de crema de leche completa este plato reconfortante, ideal para calentar el cuerpo en días fríos.",
     categories: ["salado", "plato principal", "entrada"],
   },
@@ -482,12 +482,12 @@ const recipes = [
     recipeVideo:
       "https://www.youtube.com/embed/b8KHFjFumqI?si=My6l1B1lVKenRQOv",
     recipeLink: "/pages/templates/receta",
-    recepiDescription:
+    recipeDescription:
       "Deléitate con un exquisito Pato a la Naranja, donde la carne tierna se marina con brandy y se cocina con jugo de naranja fresca. Con un toque de caramelo de azúcar y vinagre, este plato se eleva a la perfección. ¡Una opción ideal para una cena gourmet o una ocasión especial!",
     categories: ["salado", "plato principal", "entrada"],
   },
 ];
-function searchRecepiName() {
+function searchRecipeName() {
   const recipeName = localStorage.getItem("name").toLocaleLowerCase();
   for (const recipe of recipes) {
     if (recipe.name === recipeName) {
@@ -498,7 +498,7 @@ function searchRecepiName() {
 }
 
 export function recipeInfo() {
-  const storedRecipe = searchRecepiName();
+  const storedRecipe = searchRecipeName();
   if (storedRecipe !== null) {
     const ingredients = storedRecipe.ingredients;
     const recipeImg = storedRecipe.recipeImg;
@@ -510,7 +510,7 @@ export function recipeInfo() {
 }
 
 export function recipeVideo() {
-  const storedRecipe = searchRecepiName();
+  const storedRecipe = searchRecipeName();
   if (storedRecipe !== null) {
     const recipeVideo = storedRecipe.recipeVideo;
     return { recipeVideo };
@@ -519,7 +519,7 @@ export function recipeVideo() {
 }
 
 export function recipeSteps() {
-  const storedRecipe = searchRecepiName();
+  const storedRecipe = searchRecipeName();
   if (storedRecipe !== null) {
     const recipeSteps = storedRecipe.recipeSteps;
     return { recipeSteps };
@@ -527,17 +527,17 @@ export function recipeSteps() {
   return null;
 }
 
-export function recepiDescription() {
-  const recepiArray = recipes;
+export function recipeDescription() {
+  const recipeArray = recipes;
   for (const recipe of recipes) {
-    const recepiDescription = recipe.recepiDescription;
-    return { recepiDescription, recepiArray };
+    const recipeDescription = recipe.recipeDescription;
+    return { recipeDescription, recipeArray };
   }
 }
 
 export function categories() {
-  const storedRecipe = searchRecepiName();
-  const recepiArray = recipes;
+  const storedRecipe = searchRecipeName();
+  const recipeArray = recipes;
   const recipeStoredCategories = storedRecipe.categories;
   const matchingRecipesAndStoredRecipe = [];
   recipes.forEach((recipe) => {
@@ -555,5 +555,5 @@ export function categories() {
 
   console.log(matchingRecipes);
 
-  return { matchingRecipes, recepiArray };
+  return { matchingRecipes, recipeArray };
 }

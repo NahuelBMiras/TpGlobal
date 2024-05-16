@@ -3,11 +3,11 @@
 ---
 
 <script>
-  import { recipeVideo } from "../../public/recipe.mjs";
+  import { recipeVideo } from "../../public/recipe-functions.mjs";
   const recipeUrl = recipeVideo().recipeVideo;
 
   const iframe = document.createElement("iframe");
-  iframe.classList.add("recepi-video");
+  iframe.classList.add("recipe-video");
 
   iframe.src = recipeUrl;
   iframe.title = "YouTube video player";
@@ -43,7 +43,7 @@
     max-width: 707.3px;
     display: flex;
     flex-direction: column-reverse;
-    .recepi-video {
+    .recipe-video {
       width: 100%;
       aspect-ratio: 3.5/2;
       margin-bottom: 2em;
@@ -96,7 +96,7 @@
   @media (width > 600px) {
     .interactions-with-the-recipe {
       width: 80%;
-      .recepi-video {
+      .recipe-video {
         width: 100%;
         aspect-ratio: 3.5/2;
         margin-bottom: 2em;
