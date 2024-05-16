@@ -152,7 +152,7 @@ const recipes = [
     recipeLink: "/pages/templates/receta",
     recipeDescription:
       "Disfruta de un auténtico Pan de Campo, con una receta simple que combina levadura seca, harina, sal, grasa y agua tibia. El complemento perfecto para cualquier comida.",
-    categories: ["panadería", "acompañamiento"],
+    categories: ["panadería", "acompañamiento", "salado", ""],
   },
   {
     name: "risotto",
