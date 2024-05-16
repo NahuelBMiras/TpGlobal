@@ -565,7 +565,5 @@ export function categories() {
     (match) => match !== storedRecipe,
   );
 
-  console.log(matchingRecipes);
-
   return { matchingRecipes, recipeArray };
 }

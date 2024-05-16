@@ -85,7 +85,7 @@ client: true;
       grid-template-rows: repeat(2, 1fr);
       justify-items: center;
       aspect-ratio: 2.25/1;
-      width: 100%;
+      width: 95%;
 
       .link_recipe {
         text-decoration: none;
@@ -111,18 +111,81 @@ client: true;
       }
       .link-2 {
         margin-left: 0.5em;
-        width: 95%;
+        width: 89%;
         filter: brightness(0.7);
       }
 
       .link-3 {
         margin-left: 0.5em;
-        width: 95%;
+        width: 89%;
         filter: brightness(0.7);
       }
     }
   }
 
+  @media (width > 320px) {
+    .recommended_recipes {
+      .recommended_recipes-container {
+        .link-2 {
+          width: 90%;
+        }
+        .link-3 {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  @media (width > 340px) {
+    .recommended_recipes {
+      .recommended_recipes-container {
+        .link-2 {
+          width: 91%;
+        }
+        .link-3 {
+          width: 91%;
+        }
+      }
+    }
+  }
+  @media (width > 456px) {
+    .recommended_recipes {
+      .recommended_recipes-container {
+        .link-2 {
+          width: 94%;
+        }
+        .link-3 {
+          width: 94%;
+        }
+      }
+    }
+  }
+
+  @media (width > 540px) {
+    .recommended_recipes {
+      .recommended_recipes-container {
+        .link-2 {
+          width: 95%;
+        }
+        .link-3 {
+          width: 95%;
+        }
+      }
+    }
+  }
+
+  @media (width > 700px) {
+    .recommended_recipes {
+      .recommended_recipes-container {
+        .link-2 {
+          width: 96%;
+        }
+        .link-3 {
+          width: 96%;
+        }
+      }
+    }
+  }
   @media (width > 800px) {
     .recommended_recipes {
       .recommended_recipes-container {

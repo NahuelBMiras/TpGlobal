@@ -5,10 +5,10 @@ import Subtitle from "../components/Subtitle.astro";
 import RecipeCard from "../components/RecipeCard.astro";
 ---
 
-<HeaderAndFooter title="Mi Rincon De Recetas">
+<HeaderAndFooter title="Mi Rincon De Recetas" index="/index.astro">
   <main>
     <RecommendedRecipes subtitle="Recetas Recomendadas" />
-    <a href="/receta">receta</a>
+    <a href="/login">receta</a>
     <a href="/recetas">recetas</a>
     <article class="find_recipe">
       <Subtitle>Encuentra Tu Receta Ideal</Subtitle>
@@ -57,18 +57,13 @@ import RecipeCard from "../components/RecipeCard.astro";
           <button>Buscar Receta</button>
         </form>
       </section>
-      <section class="recommended_recipes">
-        <picture class="carousel-container">
-          <RecipeCard />
-        </picture>
-      </section>
-    </article>
-    <article>
-      <section class="popular_recipes">
-        <picture class="carousel_container"></picture>
-      </section>
     </article>
   </main>
+  <article>
+    <section class="popular_recipes">
+      <picture class="carousel_container"></picture>
+    </section>
+  </article>
 </HeaderAndFooter>
 
 <style>
