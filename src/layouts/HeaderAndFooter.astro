@@ -7,17 +7,40 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
+<script>
+  // Inicio EasterEgg
+  let clickCount = 0;
+
+  const logo = document.querySelector(".logo img");
+
+  logo.addEventListener("click", () => {
+    clickCount++;
+
+    if (clickCount === 5) {
+      const gif = document.createElement("img");
+      gif.src = "./img/the-binding.gif";
+      gif.alt = "Gif";
+
+      const gifContainer = document.getElementById("gifContainer");
+      gifContainer.appendChild(gif);
+
+      // Después de 30 segundos, elimina el gif
+      setTimeout(() => {
+        gifContainer.removeChild(gif);
+        clickCount = 0;
+      }, 10000);
+    }
+  });
+  
+  // Fin EasterEgg
+  
+
+</script>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <script
-      src="https://kit.fontawesome.com/4db8309fde.js"
-      crossorigin="anonymous"></script>
-
-    <!-- Roboto Slab -->
+    <title>Recetas deliciosas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,42 +54,57 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/4ecd7ae358.js"
+      crossorigin="anonymous"></script>
   </head>
   <body>
+    <!--Inicio de Header -->
     <header>
-      <div class="container_header">
-        <div class="container_header-title">
-          <h1 class="container_header-title-text">Busca Tu Antojo</h1>
+      <section>
+        <div id="gifContainer"></div>
+        <div class="logo">
+          <img src="./img/usar_logo.png" alt="Logo" />
         </div>
-        <div class="container_header-icons">
-          <ul class="container_header-icons_ul">
-            <li class="header_icon">
-              <IconoButton><i class="fa-solid fa-user"></i></IconoButton>
-            </li>
-            <li class="header_icon">
-              <IconoButton
-                ><i class="fa-solid fa-magnifying-glass"></i></IconoButton
-              >
-            </li>
-          </ul>
+        <div class="icons">
+          <a href=""> <i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="/login"> <i class="fa-solid fa-user"></i></a>
+          <a href="https://fernandoderrigo.github.io/PEDRO-PEDRO-PEDRO-PE/">
+            <i class="fa-solid fa-star"></i></a
+          >
         </div>
-      </div>
-      <nav class="container_header_pages-nav">
-        <ul class="container_pages_ul">
-          <li><a href="">Inicio</a></li>
-          <li><a href="">Recetas</a></li>
-          <li><a href="">Sobre Nosotros</a></li>
-          <li><a href="">Agrega Tu Receta</a></li>
+      </section>
+
+      <nav>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/recetas">Recetas</a></li>
+          <li><a href="#">Sube tu receta</a></li>
         </ul>
       </nav>
     </header>
-
+    <!-- Fin de Header -->
     <slot />
 
+    <!-- Footer -->
     <footer>
-      <h4 class="footer_text">
-        Propiedad de Nahuel Basail Miras y Fernando Daniel Tome Derrigo
-      </h4>
+      <div class="redes">
+        <a href="https://www.instagram.com/">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://discord.com/">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+        <a href="https://fernandoderrigo.github.io/BAM-02-V2/">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+      </div>
+
+      <p>Mi rincon de recetas - Todos los derechos reservados</p>
+      <img src="./img/footer.png" alt="" />
     </footer>
   </body>
 </html>
@@ -77,84 +115,155 @@ const { title } = Astro.props;
     padding: 0;
     box-sizing: border-box;
   }
+
   body {
     height: 100svh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 8fr 0.5fr;
+    background-color: rgb(249, 248, 247);
     font-family: "Roboto Slab", "Merriweather", serif;
   }
-  header {
-    background-color: rgba(219, 182, 138, 255);
+  main {
     grid-column: span 4;
-
-    .container_header {
-      border-bottom: 0.2em solid rgba(252, 251, 249, 255);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1rem;
-
-      .container_header-title {
-        padding: 0.5em;
-        .container_header-title-text {
-          color: rgba(193, 88, 30, 255);
-        }
-      }
-
-      .container_header-icons {
-        .container_header-icons_ul {
-          display: flex;
-          align-items: center;
-          .header_icon {
-            padding: 0.5em;
-            color: rgba(193, 88, 30, 255);
-            list-style: none;
-            margin-right: 2em;
-            font-size: 0.8rem;
-          }
-        }
-      }
-    }
-
-    .container_header_pages-nav {
-      .container_pages_ul {
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;
-        list-style: none;
-
-        li {
-          padding: 0.5em;
-
-          a {
-            text-decoration: none;
-          }
-        }
-      }
-    }
+  }
+  /* Inicio de Header */
+  header {
+    grid-column: span 4;
+    background-color: white;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  header section {
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
   }
 
-  main {
-    background-color: rgb(249, 248, 247);
+  header img {
+    width: 90%;
+    margin-bottom: 5px;
+  }
+  #gifContainer {
+    position: absolute;
+  }
 
-    padding: 0.5em;
-    grid-column: span 4;
-
-    display: grid;
-    flex-direction: column;
-    justify-content: center;
+  header .icons {
+    display: flex;
+    gap: 0.8em;
+    font-size: 1.3rem;
     align-items: center;
   }
 
-  footer {
-    background-color: rgba(219, 182, 138, 255);
+  nav {
     display: flex;
     justify-content: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-right: 5px;
+    border-bottom: 1px solid transparent;
+    padding: 2px 4px;
+  }
+
+  nav ul li:hover {
+    border-color: #148171;
+  }
+
+  nav ul li a {
+    color: #333;
     align-items: center;
+    text-decoration: none;
+    font-size: 1.4rem;
+  }
+
+  nav ul li:hover a {
+    color: #148171;
+    /* Fin de Header */
+  }
+
+  /* Inicio Footer */
+  footer {
     grid-column: span 4;
-    .footer_text {
-      color: rgba(193, 88, 30, 255);
+    display: flex;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+  }
+  footer p {
+    color: rgb(0, 1, 1);
+    text-align: center;
+    margin-bottom: 0.5em;
+    margin-top: 3em;
+  }
+  footer .redes {
+    display: flex;
+    padding: 0.5em;
+    justify-content: center;
+    font-size: x-large;
+    gap: 1em;
+  }
+  footer img {
+    width: 100%;
+  }
+  /* Fin Footer */
+
+
+  @media only screen and (max-width: 768px) {
+    footer .redes {
+      display: flex;
+      padding: 1em;
+      text-align: center;
+
+      justify-content: center;
+      font-size: x-large;
+      gap: 1em;
+      width: 100%;
+      margin-top: 1em;
+    }
+    footer {
+      margin-top: 5em;
+      align-items: baseline;
+      padding-top: 4em;
+      text-align: center;
+    }
+    footer img {
+      width: 100%;
+      height: 50px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1118px) {
+    footer {
+      text-align: center;
+
+      margin-top: 50%;
+    }
+    footer .redes {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 1114px) and (max-width: 1788px) {
+    footer {
+      text-align: center;
+
+      margin-top: 20%;
+    }
+    footer .redes {
+      text-align: center;
     }
   }
 </style>
