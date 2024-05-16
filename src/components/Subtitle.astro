@@ -1,0 +1,57 @@
+---
+
+---
+
+<div class="subtitle">
+  <div class="subtitle_container line">
+    <h2 class="subtitle_text">
+      <slot />
+    </h2>
+  </div>
+</div>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .subtitle {
+    margin: 0 auto;
+    width: 95%;
+  }
+  .subtitle_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .subtitle_text {
+      line-height: 43px;
+      text-align: center;
+      background-color: rgb(249, 248, 247);
+      font-size: 1.5rem;
+      padding: 0.5em;
+    }
+  }
+  .line {
+    background: url("/public/linea.jpeg") repeat-x scroll center center / 1px
+      1px;
+  }
+
+  @media (width > 750px) {
+    .subtitle_container {
+      .subtitle_text {
+        padding: 1em;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media (width > 1300px) {
+    .subtitle_container {
+      .subtitle_text {
+        padding: 1em;
+        font-size: 2.3rem;
+      }
+    }
+  }
+</style>

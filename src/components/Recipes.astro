@@ -1,0 +1,211 @@
+---
+
+---
+
+<script>
+  import { recipeDescription } from "../../public/recipe-functions.mjs";
+
+  const recipeContainer = document.querySelector(".recipe-container");
+  const recipeDescriptionElement = recipeDescription().recipeArray;
+  let i = 0;
+  recipeDescriptionElement.forEach(() => {
+    const recipe = document.createElement("section");
+    recipe.classList.add("recipe");
+    recipeContainer.appendChild(recipe);
+
+    const recipeLink = document.createElement("a");
+    recipeLink.classList.add("recipe-link");
+    recipeLink.id = recipeDescriptionElement[i].id;
+    recipeLink.href = "receta";
+    recipe.appendChild(recipeLink);
+
+    const recipeImgContainer = document.createElement("div");
+    recipeImgContainer.classList.add("recipe-img-container");
+    recipeLink.appendChild(recipeImgContainer);
+
+    const recipeImg = document.createElement("img");
+    const recipeImgPath = recipeDescriptionElement[i].recipeImg;
+    recipeImg.src = recipeImgPath;
+    recipeImgContainer.appendChild(recipeImg);
+
+    const recipeTextContainer = document.createElement("div");
+    recipeTextContainer.classList.add("recipe-caption");
+    recipeImgContainer.appendChild(recipeTextContainer);
+
+    const recipeName = document.createElement("h3");
+    recipeName.classList.add("text");
+    recipeTextContainer.appendChild(recipeName);
+    recipeName.innerHTML = recipeDescriptionElement[i].name.toUpperCase();
+
+    const recipeText = document.createElement("p");
+    recipeText.classList.add("text");
+    recipeText.classList.add("text-description");
+    recipeTextContainer.appendChild(recipeText);
+    recipeText.innerHTML = recipeDescriptionElement[i].recipeDescription;
+    i++;
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const a = document.querySelectorAll("a");
+
+    a.forEach((link) => {
+      link.addEventListener("click", () => {
+        localStorage.setItem("name", link.id);
+      });
+    });
+  });
+</script>
+
+<article class="recipe-container"></article>
+<style>
+  .recipe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 100%;
+    flex-wrap: wrap;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+
+    .recipe {
+      width: 80%;
+      aspect-ratio: 1/1;
+      max-width: 430px;
+      border-radius: 1em;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.658);
+      overflow: hidden;
+
+      &:hover {
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.658);
+      }
+
+      .recipe-img-container {
+        aspect-ratio: 1/1;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        align-items: center;
+        img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
+
+        .recipe-caption {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 0.5em;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          transition: 0.5s ease;
+          box-sizing: border-box;
+
+          .text {
+            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+          }
+
+          .text-description {
+            margin-top: 0.3em;
+            display: none;
+            box-sizing: border-box;
+            padding: 0.7em;
+          }
+        }
+      }
+    }
+  }
+
+  .recipe-container {
+    .recipe {
+      &:hover {
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 822px) {
+    .recipe-container {
+      flex-direction: row;
+      .recipe {
+        width: 45%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 1300px) {
+    .recipe-container {
+      flex-direction: row;
+      .recipe {
+        width: 30%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 1416px) {
+    .recipe-container {
+      .recipe {
+        width: 25%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 1700px) {
+    .recipe-container {
+      .recipe {
+        width: 21%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 1900px) {
+    .recipe-container {
+      .recipe {
+        width: 21%;
+        .recipe-img-container {
+          .recipe-caption {
+            .text-description {
+            }
+          }
+        }
+      }
+    }
+  }
+</style>

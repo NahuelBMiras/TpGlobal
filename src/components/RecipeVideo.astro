@@ -1,0 +1,113 @@
+---
+
+---
+
+<script>
+  import { recipeVideo } from "../../public/recipe-functions.mjs";
+  const recipeUrl = recipeVideo().recipeVideo;
+
+  const iframe = document.createElement("iframe");
+  iframe.classList.add("recipe-video");
+
+  iframe.src = recipeUrl;
+  iframe.title = "YouTube video player";
+  iframe.allow =
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  iframe.allowFullscreen = true;
+
+  document.querySelector(".interactions-with-the-recipe").appendChild(iframe);
+</script>
+
+<article class="interactions-with-the-recipe">
+  <section class="save-share-print">
+    <h2>Si te gusto la receta puedes:</h2>
+    <button class="save"
+      >Guardar Receta <i class="fa-solid fa-bookmark button-icon"></i></button
+    >
+    <button class="share"
+      >Compartir <i class="fa-solid fa-share button-icon"></i></button
+    >
+    <button class="print"
+      >Imprimir <i class="fa-solid fa-print button-icon"></i></button
+    >
+  </section>
+</article>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .interactions-with-the-recipe {
+    width: 90%;
+    max-width: 707.3px;
+    display: flex;
+    flex-direction: column-reverse;
+    .recipe-video {
+      width: 100%;
+      aspect-ratio: 3.5/2;
+      margin-bottom: 2em;
+    }
+  }
+
+  .save-share-print {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1em;
+    align-items: center;
+    text-align: center;
+
+    button {
+      all: unset;
+      display: flex;
+      justify-content: space-around;
+      cursor: pointer;
+      width: 10em;
+      padding: 0.5em;
+      border: 2px solid black;
+      border-radius: 2em;
+      box-shadow: 2px 2px 4px rgb(71, 71, 71);
+
+      transition: 0.2s ease;
+      position: relative;
+
+      .button-icon {
+        position: absolute;
+        right: 15px;
+      }
+      &:hover {
+        border: 2px solid rgb(20, 129, 113);
+        color: rgb(20, 129, 113);
+        box-shadow: 4px 4px 8px black;
+        text-shadow: 2px 2px 4px rgb(121, 121, 121);
+      }
+      &:active {
+        transition: 0.1s ease;
+        background-color: rgb(10, 64, 57);
+        border-color: rgb(10, 64, 57);
+        color: white;
+        box-shadow: none;
+        text-shadow: none;
+      }
+    }
+  }
+
+  @media (width > 600px) {
+    .interactions-with-the-recipe {
+      width: 80%;
+      .recipe-video {
+        width: 100%;
+        aspect-ratio: 3.5/2;
+        margin-bottom: 2em;
+      }
+    }
+  }
+  @media (width > 1300px) {
+    .interactions-with-the-recipe {
+      margin-top: 6em;
+      grid-column: 3/4;
+      align-self: flex-start;
+    }
+  }
+</style>
