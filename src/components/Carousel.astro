@@ -1,0 +1,194 @@
+---
+
+---
+
+<script>
+  // Inicio Carousel
+  //Contador inicializado en cero
+  let contador = 0;
+  //Esto lo creabas abajo de todo y la llamabas arriba
+  function cambiarImg() {
+    if (contador == obj2.length) {
+      for (var i = 0; i < obj2.length; i++) {
+        obj2[i].style.opacity = "0";
+        contador--;
+      }
+      obj2[contador].style.opacity = "1";
+    } else {
+      obj2[contador].style.opacity = "1";
+      contador++;
+    }
+  }
+  //Cosa que arreglo Nahuel
+  function iniciar() {
+    setInterval(cambiarImg, 3000);
+  }
+  //Cosa que arreglo Nahuel
+  window.addEventListener("load", iniciar, false);
+
+  const obj = document.getElementById("slider");
+  const obj2 = obj.getElementsByTagName("img");
+  const buttonIZ = document.querySelector(".boton-izquierda");
+  const buttonDe = document.querySelector(".boton-derecha");
+
+  function cambiarManual(sentido) {
+    if (sentido == "DER") {
+      obj2[contador].style.opacity = 0;
+      if (contador < obj2.length - 1) {
+        contador++;
+        obj2[contador].style.opacity = 1;
+        console.log("Contador vale " + contador + " Longitud " + obj2.length);
+      } else {
+        contador = 0;
+        obj2[contador].style.opacity = 1;
+        console.log("Contador vale " + contador + " Longitud " + obj2.length);
+      }
+    } else if (sentido == "IZQ") {
+      obj2[contador].style.opacity = 0;
+      if (contador != 0) {
+        contador--;
+        obj2[contador].style.opacity = 1;
+      } else {
+        contador = obj2.length - 1;
+        obj2[contador].style.opacity = 1;
+      }
+    }
+  }
+  //Cosa que arreglo Nahuel
+  buttonIZ.addEventListener("click", () => {
+    cambiarManual("IZQ");
+  });
+  buttonDe.addEventListener("click", () => {
+    cambiarManual("DER");
+  });
+  // Fin de Carousel
+</script>
+
+<!-- Inicio del Carousel -->
+<div class="carousel-container">
+  <div id="slider" style="position: relative">
+    <img src="/img/carousel/receta1.jpg" alt="" />
+    <img src="/img/carousel/receta2.jpg" alt="" />
+    <img src="/img/carousel/receta3.jpg" alt="" />
+    <img src="/img/carousel/receta4.jpg" alt="" />
+    <img src="/img/carousel/receta5.jpg" alt="" />
+    <img src="/img/carousel/receta6.jpg" alt="" />
+    <img src="/img/carousel/receta7.jpg" alt="" />
+    <img src="/img/carousel/receta8.jpg" alt="" />
+    <img src="/img/carousel/receta9.jpg" alt="" />
+  </div>
+  <!-- Botones -->
+  <div class="button-container">
+    <div class="boton-izquierda">
+      <input type="button" value="anterior" onclick="cambiarManual('IZQ')" />
+    </div>
+    <div class="boton-derecha">
+      <input type="button" value="siguiente" onclick="cambiarManual('DER')" />
+    </div>
+  </div>
+</div>
+<!-- Fin del Carousel -->
+
+<style>
+  /* Inicio Carousel */
+
+  .carousel-container {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 55%;
+    height: 25%;
+    overflow: hidden;
+    background-color: black;
+  }
+
+  #slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  #slider img {
+    width: 100%;
+    height: 100%;
+    -moz-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    opacity: 0;
+    position: absolute;
+  }
+
+  #slider img:nth-child(1) {
+    opacity: 1;
+  }
+
+  .boton-izquierda,
+  .boton-derecha {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+
+  .boton-izquierda {
+    left: 0;
+  }
+
+  .boton-derecha {
+    right: 0;
+  }
+
+  .boton-izquierda input[type="button"],
+  .boton-derecha input[type="button"] {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5em;
+    border: 2px solid black;
+    background-color: #148171;
+    border-radius: 2em;
+    box-shadow: 2px 2px 4px rgb(71, 71, 71);
+    transition: 0.2s ease;
+  }
+
+  .boton-izquierda input[type="button"]:hover,
+  .boton-derecha input[type="button"]:hover {
+    border: 2px solid rgb(20, 129, 113);
+    color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 8px black;
+    text-shadow: 2px 2px 4px rgb(121, 121, 121);
+    background-color: #596de5;
+  }
+
+  .boton-izquierda input[type="button"]:active,
+  .boton-derecha input[type="button"]:active {
+    transition: 0.1s ease;
+    background-color: rgb(10, 64, 57);
+    border-color: rgb(10, 64, 57);
+    color: white;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  /* Fin Carousel */
+  /* Pantallas pequeñas*/
+  @media only screen and (max-width: 768px) {
+    .carousel-container {
+      height: 10%;
+      width: 100%;
+    }
+    .boton-izquierda,
+    .boton-derecha {
+      position: absolute;
+      width: 20%;
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+  }
+</style>

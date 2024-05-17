@@ -1,0 +1,119 @@
+---
+import HeaderAndFooter from "../layouts/HeaderAndFooter.astro";
+---
+
+<HeaderAndFooter title="MRR Login" page="index">
+  <main>
+    <div class="login-container">
+      <h2>Iniciar sesión</h2>
+      <form id="login-form">
+        <div class="input-group">
+          <label for="username">Usuario</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </main>
+</HeaderAndFooter>
+<style>
+  main {
+    grid-column: span 4;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    background-color: rgb(249, 248, 247);
+  }
+  .login-container {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    padding-right: 6em;
+    padding-left: 5em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 2.5/1;
+    width: 35%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+    width: 10em;
+    padding: 0.5em;
+    border: 2px solid black;
+    border-radius: 2em;
+    box-shadow: 2px 2px 4px rgb(71, 71, 71);
+    transition: 0.2s ease;
+    text-align: center;
+  }
+
+  button:hover {
+    border: 2px solid rgb(20, 129, 113);
+    color: rgb(20, 129, 113);
+    box-shadow: 4px 4px 8px black;
+    text-shadow: 2px 2px 4px rgb(121, 121, 121);
+  }
+
+  button:active {
+    transition: 0.1s ease;
+    background-color: rgb(10, 64, 57);
+    border-color: rgb(10, 64, 57);
+    color: white;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+  @media (width < 576px) {
+    .login-container {
+      padding-right: 3em;
+      padding-left: 2em;
+      width: 99%;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1786px) {
+    .login-container {
+      margin-top: 10em;
+    }
+  }
+</style>
+<script>
+  document
+    .getElementById("login-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Aquí simplemente mostraremos los datos en la consola
+      console.log("Username:", username);
+      console.log("Password:", password);
+    });
+</script>

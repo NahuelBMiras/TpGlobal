@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetas deliciosas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Merriweather -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ecd7ae358.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Inicio de Header -->
+    <header>
+      <section>
+        <div id="gifContainer"></div>
+        <div class="logo">
+          <img src="./img/usar_logo.png" alt="Logo" />
+        </div>
+        <div class="icons">
+          <a href=""> <i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href=""> <i class="fa-solid fa-user"></i></a>
+          <a href="https://fernandoderrigo.github.io/PEDRO-PEDRO-PEDRO-PE/">
+            <i class="fa-solid fa-star"></i
+          ></a>
+        </div>
+      </section>
+
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Recetas</a></li>
+          <li><a href="#">Sube tu receta</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Fin de Header -->
+    <!--Inicio de Imagenes Banner -->
+    <main>
+      <div class="images_container">
+        <img class="img1" src="./img/comida1.jpg" alt="" />
+        <div class="vertical_images">
+          <img class="img2" src="./img/comida2.jpg" alt="" />
+          <img class="img3" src="./img/comida3.jpg" alt="" />
+        </div>
+      </div>
+      <!--Fin de Imagenes Banner -->
+      <h2>Encuentra tu receta</h2>
+      <!--Inicio de FORMS -->
+      <div class="form_container">
+        <form action="" class="form_find_recipe">
+          <fieldset>
+            <legend>
+              <h3>Ingredientes:</h3>
+            </legend>
+            <label class="label_ingredient">
+              <select>
+                <option value="opcion0">Seleccione</option>
+                <option value="opcion1">Verduras</option>
+                <option value="opcion2">Frutas</option>
+                <option value="opcion3">Legumbres</option>
+              </select>
+            </label>
+            <br />
+            <label class="label_ingredient">
+              <select>
+                <option value="opcion0">Seleccione</option>
+                <option value="opcion1">Aceite</option>
+                <option value="opcion1">Leche</option>
+                <option value="opcion3">Manteca</option>
+              </select>
+            </label>
+            <br />
+            <label class="label_ingredient">
+              <select>
+                <option value="opcion0">Seleccione</option>
+                <option value="opcion1">Huevos</option>
+                <option value="opcion2">Condimentos</option>
+                <option value="opcion3">Hongos</option>
+              </select>
+            </label>
+            <br />
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <h3>Dificultad:</h3>
+            </legend>
+            <label class="label_difficulty">
+              <select>
+                <option value="opcion0">Seleccione</option>
+                <option value="opcion1">Facil</option>
+                <option value="opcion2">Intermedio</option>
+                <option value="opcion3">Dificil</option>
+              </select>
+            </label>
+            <br />
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h3>Sabor:</h3>
+            </legend>
+            <label class="label_taste">
+              <select>
+                <option value="opcion0">Seleccione</option>
+                <option value="opcion1">Salado</option>
+                <option value="opcion2">Dulce</option>
+                <option value="opcion3">Agrio</option>
+                <option value="opcion3">Agridulce</option>
+                <option value="opcion3">Amargo</option>
+              </select>
+            </label>
+            <br />
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h3>Método de Cocción:</h3>
+            </legend>
+            <label class="label_cook">
+              <select>
+                <option value="opcion0">Seleccione</option>
+                <option value="opcion1">Horno</option>
+                <option value="opcion2">Microondas</option>
+                <option value="opcion3">Olla a presión</option>
+              </select>
+            </label>
+            <br />
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h3>Tiempo de Cocción:</h3>
+            </legend>
+            <label class="label_ingredient">
+              <select>
+                <option value="opcion0">Seleccione</option>
+                <option value="opcion1">Menos de 1 hora</option>
+                <option value="opcion2">Mas de 2 horas</option>
+                <option value="opcion3">Mas de 3 horas</option>
+              </select>
+            </label>
+            <br />
+          </fieldset>
+
+          <button>Buscar Receta</button>
+        </form>
+      </div>
+      <!--Fin del FORMS -->
+      <h2>Recetas de la comunidad</h2>
+      <!--Inicio del Carousel -->
+      <div class="carousel-container">
+        <div id="slider" style="position: relative">
+          <img src="./img/carousel/receta1.jpg" alt="" />
+          <img src="./img/carousel/receta2.jpg" alt="" />
+          <img src="./img/carousel/receta3.jpg" alt="" />
+          <img src="./img/carousel/receta4.jpg" alt="" />
+          <img src="./img/carousel/receta5.jpg" alt="" />
+          <img src="./img/carousel/receta6.jpg" alt="" />
+          <img src="./img/carousel/receta7.jpg" alt="" />
+          <img src="./img/carousel/receta8.jpg" alt="" />
+          <img src="./img/carousel/receta9.jpg" alt="" />
+        </div>
+        <!-- Botones -->
+        <div class="button-container">
+          <div class="boton-izquierda">
+            <input
+              type="button"
+              value="anterior"
+              onclick="cambiarManual('IZQ')"
+            />
+          </div>
+          <div class="boton-derecha">
+            <input
+              type="button"
+              value="siguiente"
+              onclick="cambiarManual('DER')"
+            />
+          </div>
+        </div>
+      </div>
+      <!--Fin del Carousel -->
+
+      <!-- Inicio Receta -->
+      <h2>Recetas Destacadas</h2>
+
+      <div class="recipes">
+        <div class="recipe">
+          <div class="recipe-img">
+            <img src="./img/receta9.jpg" alt="Recipe 1" />
+            <div class="recipe-caption">
+              <h3>Pato a la naranja</h3>
+              <p>
+                El pato a la naranja es un plato clásico francés con pechuga de
+                pato glaseada en salsa de naranja. Es crujiente por fuera,
+                jugoso por dentro y se sirve con guarniciones como puré o
+                vegetales al vapor. Es una elección refinada para eventos
+                especiales.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="recipe">
+          <div class="recipe-img">
+            <img src="./img/receta2.jpg" alt="Recipe 2" />
+            <div class="recipe-caption">
+              <h3>Tarta de verdura</h3>
+              <p>
+                La tarta de vegetales es una delicia versátil hecha con una base
+                de masa y rellena de una mezcla de vegetales frescos y queso. Se
+                hornea hasta obtener una textura dorada y crujiente. Es una
+                opción sabrosa y saludable para cualquier ocasión.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="recipe">
+          <div class="recipe-img">
+            <img src="./img/receta3.jpg" alt="Recipe 3" />
+            <div class="recipe-caption">
+              <h3>Papa rellena</h3>
+              <p>
+                La papa rellena es un plato latinoamericano hecho con papas
+                cocidas y rellenas de una mezcla de carne, cebolla y especias.
+                Se empanizan y fríen hasta dorar. Es un bocado crujiente y
+                sabroso, perfecto como aperitivo o plato principal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin de Receta -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="redes">
+        <a href="https://www.instagram.com/">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://discord.com/">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+        <a href="https://fernandoderrigo.github.io/BAM-02-V2/">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+      </div>
+
+      <p>Recetas deliciosas - Todos los derechos reservados</p>
+      <img src="./img/footer.png" alt="" />
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

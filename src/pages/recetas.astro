@@ -1,0 +1,39 @@
+---
+import HeaderAndFooter from "../layouts/HeaderAndFooter.astro";
+import Recipes from "../components/Recipes.astro";
+import Subtitle from "../components/Subtitle.astro";
+import RecommendedRecipes from "../components/RecommendedRecipes.astro";
+---
+
+<HeaderAndFooter title="MRR Recetas" page="receta">
+  <main>
+    <RecommendedRecipes subtitle="Recetas Recomendadas" />
+    <article class="recipes_container">
+      <Subtitle>Recetas</Subtitle>
+      <section class="recipes">
+        <Recipes />
+      </section>
+    </article>
+  </main>
+</HeaderAndFooter>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  main {
+    grid-column: span 4;
+    width: 100%;
+    background-color: rgb(249, 248, 247);
+  }
+
+  .recipes_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 1.5em;
+  }
+</style>

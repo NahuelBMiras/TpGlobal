@@ -1,0 +1,78 @@
+---
+
+---
+
+<script>
+  import { recipeSteps } from "../scripts/recipe-functions.mjs";
+  const recipeStpsList = document.querySelector(".steps-list");
+  const recipeStpsText = recipeSteps().recipeSteps;
+
+  recipeStpsText.forEach((stepText) => {
+    const stepTextLenght = stepText.length;
+    const stepElemet = document.createElement("li");
+    stepElemet.classList.add("step");
+    recipeStpsList.appendChild(stepElemet);
+
+    const stepElementText = document.createElement("li");
+    stepElementText.classList.add("step-title");
+    stepElemet.appendChild(stepElementText);
+    stepElementText.innerHTML = stepText[0];
+
+    const recipeSubstepsList = document.createElement("ul");
+    recipeSubstepsList.classList.add("recipe-substeps");
+    stepElemet.appendChild(recipeSubstepsList);
+
+    let i = 1;
+    while (i < stepTextLenght) {
+      const recipeSubsteps = document.createElement("li");
+      recipeSubstepsList.appendChild(recipeSubsteps);
+      recipeSubsteps.innerHTML = stepText[i];
+      i++;
+    }
+  });
+</script>
+<article class="recipe-steps">
+  <ul class="steps-list"></ul>
+</article>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .recipe-steps {
+    grid-column: 2/3;
+    width: 90%;
+
+    border-bottom: 1px solid black;
+    margin-bottom: 1.5em;
+
+    .steps-list {
+      list-style: none;
+
+      .step-title {
+        font-size: 1.728rem;
+        text-decoration: underline 1px;
+      }
+      ul {
+        margin-bottom: 2em;
+        padding: 0.2em 1em;
+        li {
+          font-size: 1rem;
+          list-style: decimal;
+          text-align: justify;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  @media (width > 1300px) {
+    .recipe-steps {
+      grid-column: 2/3;
+      border-bottom: none;
+      border-right: 1px solid black;
+      padding-right: 1em;
+    }
+  }
+</style>
