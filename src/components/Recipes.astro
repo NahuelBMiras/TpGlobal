@@ -3,7 +3,7 @@
 ---
 
 <script>
-  import { recipeDescription } from "../../public/recipe-functions.mjs";
+  import { recipeDescription } from "../scripts/recipe-functions.mjs";
 
   const recipeContainer = document.querySelector(".recipe-container");
   const recipeDescriptionElement = recipeDescription().recipeArray;
@@ -15,6 +15,10 @@
 
     const recipeLink = document.createElement("a");
     recipeLink.classList.add("recipe-link");
+    recipeLink.setAttribute(
+      "aria-label",
+      `Redireccion a Receta ${recipeDescriptionElement[i].name}`,
+    );
     recipeLink.id = recipeDescriptionElement[i].id;
     recipeLink.href = "receta";
     recipe.appendChild(recipeLink);
@@ -24,8 +28,10 @@
     recipeLink.appendChild(recipeImgContainer);
 
     const recipeImg = document.createElement("img");
-    const recipeImgPath = recipeDescriptionElement[i].recipeImg;
+    const recipeImgPath = recipeDescriptionElement[i].recipeImgRecetas;
+    recipeImg.alt = recipeDescriptionElement[i].name;
     recipeImg.src = recipeImgPath;
+    recipeImg.loading = "lazy";
     recipeImgContainer.appendChild(recipeImg);
 
     const recipeTextContainer = document.createElement("div");

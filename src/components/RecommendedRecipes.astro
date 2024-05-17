@@ -12,10 +12,12 @@ client: true;
 <script>
   window.addEventListener("DOMContentLoaded", () => {
     const pathImg = [
-      "/food/eaters-collective-12eHC6FxPyg-unsplash.jpg",
-      "/food/aurelien-lemasson-theobald-x00CzBt4Dfk-unsplash.jpg",
-      "/food/charlesdeluvio-D-vDQMTfAAU-unsplash.jpg",
+      "/RecommendedRecipes/budin.webp",
+      "/RecommendedRecipes/sopa.webp",
+      "/RecommendedRecipes/risotto.webp",
     ];
+
+    const altImg = ["budin", "sopa", "risotto"];
     let i = 0;
     const img1 = document.querySelector("#img1");
     const img2 = document.querySelector("#img2");
@@ -24,8 +26,9 @@ client: true;
 
     let currentIndex = 0;
     const changeImage = function () {
-      imgArray.forEach((element, index) => {
-        element.src = pathImg[(currentIndex + index) % pathImg.length];
+      imgArray.forEach((img, index) => {
+        img.src = pathImg[(currentIndex + index) % pathImg.length];
+        img.alt = altImg[(currentIndex + index) % pathImg.length];
       });
       currentIndex = (currentIndex + 1) % pathImg.length;
     };
@@ -36,30 +39,19 @@ client: true;
 <article class="recommended_recipes">
   <Subtitle>{subtitle}</Subtitle>
   <picture class="recommended_recipes-container">
-    <a href="" class="link_recipe link-1">
+    <div href="" class="container-recepi link-1">
+      <img src="/RecommendedRecipes/budin.webp" class="recepi-img" id="img1" />
+    </div>
+    <div href="" class="container-recepi link-2">
+      <img src="/RecommendedRecipes/sopa.webp" class="recepi-img" id="img2" />
+    </div>
+    <div href="" class="container-recepi link-3">
       <img
-        src="/food/eaters-collective-12eHC6FxPyg-unsplash.jpg"
-        alt=""
-        class="link_recipe-img"
-        id="img1"
-      />
-    </a>
-    <a href="" class="link_recipe link-2">
-      <img
-        src="/food/aurelien-lemasson-theobald-x00CzBt4Dfk-unsplash.jpg"
-        alt=""
-        class="link_recipe-img"
-        id="img2"
-      />
-    </a>
-    <a href="" class="link_recipe link-3">
-      <img
-        src="/food/charlesdeluvio-D-vDQMTfAAU-unsplash.jpg"
-        alt=""
-        class="link_recipe-img"
+        src="/RecommendedRecipes/risotto.webp"
+        class="recepi-img"
         id="img3"
       />
-    </a>
+    </div>
   </picture>
 </article>
 
@@ -87,7 +79,7 @@ client: true;
       aspect-ratio: 2.25/1;
       width: 95%;
 
-      .link_recipe {
+      .container-recepi {
         text-decoration: none;
 
         padding: 0.3em;
@@ -95,7 +87,7 @@ client: true;
         max-width: 100%;
         aspect-ratio: 1.5/1;
 
-        .link_recipe-img {
+        .recepi-img {
           width: 100%;
           aspect-ratio: 1.5/1;
 
