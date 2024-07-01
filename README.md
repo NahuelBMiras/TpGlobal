@@ -1,4 +1,3 @@
-@@ -0,0 +1,39 @@
 
 ![Logo](https://raw.githubusercontent.com/NahuelBMiras/TpGlobal/Nahuel/public/img/usar_logo.png)
 
