@@ -1,94 +1,40 @@
-# 🍫 Chocoarte Delicioso 🍫
+@@ -0,0 +1,39 @@
 
-![Logo de Chocoarte Delicioso](http://fernandoderrigo.pythonanywhere.com/static/assets/index/logo/logo_oscuro_7_11zon.webp)
+![Logo](https://raw.githubusercontent.com/NahuelBMiras/TpGlobal/Nahuel/public/img/usar_logo.png)
 
-¡Bienvenido a **Chocoarte Delicioso**! Esta es una tienda en línea especializada en la venta de bombones, chocolates, figuras de azúcar y otros productos de confitería de alta calidad.
 
-## 📜 Descripción
+# 🎂 Mi Rincón de Recetas🍞
 
-Chocoarte Delicioso es una plataforma web diseñada para ofrecer una experiencia de compra fácil y agradable para los amantes del chocolate y la confitería. Los usuarios pueden explorar nuestro catálogo, registrarse, iniciar sesión y gestionar sus perfiles de usuario, además de realizar compras de sus productos favoritos.
+Este proyecto tiene como objetivo crear una página en la cual puedas encontrar la receta justa para aquello que tienes ganas. Si quieres algo salado, te dará recetas saladas. Si quieres algo con manzana y que no sea postre, te dará otra receta.
 
-## 🌟 Características
 
-En Chocoarte Delicioso, puedes encontrar las siguientes páginas:
+El mecanismo para conseguir esto sigue en proceso de desarrollo, pero es nuestro objetivo.
 
-- 🏠 **Página de Inicio**: La página principal con una introducción a nuestros productos y promociones.
-- 🍬 **Página de Productos**: Una lista detallada de todos nuestros productos, incluyendo bombones, chocolates y figuras de azúcar.
-- 📖 **Página Sobre Nosotros**: Información sobre la historia de nuestra empresa y nuestro equipo.
-- 📞 **Página de Contacto**: Formulario de contacto para que los usuarios puedan comunicarse con nosotros.
-- 🔐 **Página de Login**: Para que los usuarios registrados puedan iniciar sesión en sus cuentas.
-- 📝 **Página de Registro**: Para que nuevos usuarios puedan crear una cuenta.
-- 👤 **Página de Usuario**: Donde los usuarios pueden ver y editar su información personal y preferencias.
 
-Además, el proyecto incluye la creación y administración de una base de datos para manejar toda la información de los usuarios y productos.
+# 🥞 Dentro van a poder encontrar:
 
-## 💻 Tecnologías Utilizadas
+- ## 🍕 Página de inicio:
+  - Desde esta van a poder acceder a la página de recetas (nav recetas) y al login (icono de usuario).
+  - Encontrarás un carrusel con recetas.
+  - Algunas recetas que te podrían gustar.
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Flask (Python)
-- **Base de Datos**: MySQL
-- **Control de Versiones**: Git
+- ## 🥣 Página de Recetas:
+  - Aquí van a encontrar las recetas que tenemos por el momento. Si el usuario no quiere hacerlo de la manera en que nosotros se lo proponemos, puede buscar una receta él mismo desde aquí.
+  - También, desde aquí, al hacer clic en una de las recetas, irán a la receta elegida. Aquí implementamos el uso del localStorage: al hacer clic, esto almacena en el localStorage la receta elegida y luego esta es buscada en un array de objetos para comenzar a renderizar toda la página.
 
-## ⚙️ Configuración del Proyecto
+- ## 🍗 Receta:
+  - Como explicamos anteriormente, esta se genera según lo almacenado en el localStorage. Por el momento, tenemos 11 recetas a las que pueden acceder.
+  - Dentro encontrarán los ingredientes, la receta, una imagen de esta, el paso a paso de la receta, un video y unas recetas que podrían gustarte. Estas son según características guardadas en el array anterior; si haces clic, te cargan la página con los nuevos valores.
+  - También hay botones de compartir, imprimir y guardar. Por el momento no tienen una funcionalidad.
 
-1. Clona el repositorio:
+- ## 🍪 Login
+  - Aquí el usuario va a poder registrarse.
 
-    ```bash
-    git clone https://github.com/tu_usuario/ChocoarteDelicioso.git
-    cd ChocoarteDelicioso
-    ```
 
-2. Crea y activa un entorno virtual:
+- ## Link a nustro deploy:
+  - https://master--melodic-rabanadas-8af3d3.netlify.app/
 
-    ```bash
-    python -m venv env
-    source env/bin/activate  # En Windows usa `env\Scripts\activate`
-    ```
 
-3. Instala las dependencias:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Configura la base de datos:
-
-    - Crea una base de datos en MySQL llamada `chocoarte`.
-    - Importa las tablas y datos iniciales utilizando el archivo SQL proporcionado.
-
-5. Configura las variables de entorno necesarias:
-
-    ```bash
-    export FLASK_APP=app.py
-    export FLASK_ENV=development
-    ```
-
-6. Inicia la aplicación:
-
-    ```bash
-    flask run
-    ```
-
-## 📂 Estructura del Proyecto
-
-- **app.py**: Archivo principal de la aplicación Flask.
-- **templates/**: Directorio que contiene las plantillas HTML.
-- **static/**: Directorio para archivos estáticos como CSS, JavaScript, e imágenes.
-- **routes/**: Directorio con los archivos de rutas para las diferentes funcionalidades.
-- **models/**: Directorio con los modelos de la base de datos.
-- **requirements.txt**: Archivo con las dependencias del proyecto.
-- **database/**: Directorio con scripts SQL para la creación y administración de la base de datos.
-
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, por favor sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una rama con tu nueva funcionalidad o corrección de errores: `git checkout -b mi-nueva-funcionalidad`.
-3. Realiza tus cambios y haz commits: `git commit -am 'Añadí una nueva funcionalidad'`.
-4. Empuja tus cambios a la rama: `git push origin mi-nueva-funcionalidad`.
-5. Abre un Pull Request.
-
----
-
-¡Gracias por visitar **Chocoarte Delicioso**! 🍫 Esperamos que disfrutes de nuestros productos tanto como nosotros disfrutamos creándolos para ti.
+## 🛠 Tecnologías Utilizadas:
+Las tecnologías usadas en este proyecto son: JavaScript, HTML, CSS y Astro.
